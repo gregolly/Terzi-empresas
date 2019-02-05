@@ -235,7 +235,6 @@ function initMap() {
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhIZwkLje5pSBv86PCKegoBirrW0AWtL4&callback=initMap"
     async defer></script>
-    <nav></nav>
 </section>
 
 <?php get_footer(); ?>
