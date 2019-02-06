@@ -228,8 +228,19 @@
     var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
-    zoom: 8
+    center: {lat: -14.617607, lng: -57.487095},
+    zoom: 8,
+    scrollWheeler: false
+  });
+}
+
+function addMarker(lat,long,icon,content){
+  var latLng = {'lat':lat, 'long':long};
+
+  var marker = new google.maps.Marker({
+    position: latLng,
+    map:map,
+    icon:icon
   });
 }
   </script>
