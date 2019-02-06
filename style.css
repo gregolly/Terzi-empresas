@@ -430,8 +430,9 @@ a{
   margin: 0 auto;
 }
 .blog > .news{
-  width: calc(50% - 150px);
+  width: calc(50%);
   padding: 50px;
+  box-sizing: border-box;
 }
 .blog > .news h3{
   width: 179px;
@@ -498,8 +499,9 @@ a{
   margin-top: 15px;
 }
 .container-events{
-  width: calc(50% - 50px);
+  width: calc(50%);
   padding: 50px;
+  box-sizing: border-box;
 }
 .container-events .divisor{
   display: flex;
@@ -509,6 +511,7 @@ a{
   width: 35%;
   display: flex;
   flex-wrap: wrap;
+  margin-right: 62px;
 }
 .container-events h3{
   width: 179px;
@@ -561,8 +564,9 @@ a{
   color: #000000;
 }
 .container > .price{
-  width: calc(50% - 150px);
+  width: 50%;
   padding: 50px;
+  box-sizing: border-box
 }
 .container .price h5{
   width: 179px;
@@ -580,8 +584,9 @@ a{
   margin-bottom: 25px;
 }
 .container .links{
-  width: calc(50% - 150px);
+  width: 50%;
   padding: 50px;
+  box-sizing: border-box
 }
 .container .links h5{
   width: 179px;
@@ -712,8 +717,6 @@ a{
 }
 .rodape{
   background-image: linear-gradient(to bottom, #d92225, #991214);
-  margin: 0 auto;
-  display: flex;
 }
 .rodape > .rodape-itens{
   display: flex;
@@ -723,9 +726,12 @@ a{
 }
 .rodape .rodape-itens .rodape-wrap{
   color: #fff;
-  flex: 1 1 calc(25% - 150px);
+  flex: 1 1 25%;
   margin-top: 100px;
   align-self: center;
+  box-sizing: border-box;
+  margin-right: 30px;
+  margin-left: 30px;
 }
 .rodape .rodape-itens .rodape-wrap > .phones li:first-child{
   font-family: 'Roboto', sans-serif;
@@ -774,7 +780,7 @@ a{
   margin-bottom: 20px;
 }
 .rodape .rodape-itens .rodape-wrap.rodape-wrap-adress p i{
-  width: 26px;
+  width: 40px;
   font-size: 25px;
 }
 .rodape-wrap .rodape-form form input{
