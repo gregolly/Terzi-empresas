@@ -11,13 +11,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 *::selection{
   background-color: #b9de3e;
-  box-sizing: border-box;
 }
 .container{
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+}
+@media(max-width:800px){
+  .container{
+    width: 300px;
+  }
 }
 img{
   display: block;
@@ -54,6 +58,7 @@ a{
   background-image: url('img/slide1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center 100%;
   position: relative;
   overflow: hidden;
 }
@@ -111,61 +116,37 @@ a{
 .slide .logo{
   color: #fff;
   padding-top: 150px;
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  /* display: flex; */
+  display: flex;
+  flex-wrap: wrap;
 }
 .logo-text{
   width: 400px;
   height: 257px;
+  padding-right: 120px;
+  margin-right: 10px;
+  margin-left: 10px
+}
+.logo-text h1 img::after{
+  content: '';
   display: inline-block;
-  padding-right: 65px;
-  position: relative;
-  flex: 1 1 50%;
-  flex-wrap: wrap;
-}
-@media (max-width: 800px){
-  .logo-text{
-    display: block;
-    width: 100%;
-  }
-  .slide .logo p{
-    display: block;
-    width: 100%;
-  }
-}
-.logo-slide{
-  width: 250px;
-  height: 150px;
-  position: absolute;
-  top: -55px;
-  left: -68px;
-}
-.slide .logo h1{
-  color: inherit;
-  font-stretch: condensed;
-  font-size: 50px;
-  font-weight: bold;
-  letter-spacing: normal;
-  text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
+  width: 1px;
+  height: 100px;
+  background-color: #fff;
 }
 .slide .logo p{
   color: inherit;
-  display: inline-block;
-  width: 281px;
-  height: 130px;
+  width: 314px;
   font-family: 'Roboto', sans-serif;
-  font-size: 32.5px;
+  font-size: 36.5px;
   font-weight: bold;
   font-style: italic;
-  font-stretch: condensed;
   line-height: 1.09;
-  letter-spacing: normal;
-  text-align: left;
   text-transform: uppercase;
-  flex: 1 1 50%;
-  flex-wrap: wrap;
+  align-self: center;
+  margin-right: 10px;
+  margin-left: 10px
 }
 /* .slide .logo h1::after{
   content: " ";
@@ -175,21 +156,14 @@ a{
   background-color: #fff;
   margin-left: 120px;
 } */
-
-.-first-name{
-  font-size: 100px;
-  letter-spacing: 4px;
-}
-.-second-name{
-  position: relative;
-  top: -12px;
-  letter-spacing: 4px;
-}
 .services-container{
   max-width: 1000px;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
+  padding: 80px 0;
+  margin-right: 10px;
+    margin-left: 10px
 }
 .services{
   margin-top: 14px;
@@ -206,13 +180,13 @@ a{
   letter-spacing: normal;
   text-align: left;
   color: #6c6c6c;
-  flex-grow: 2;
+  flex: 1 1 50%;
   text-transform: uppercase;
 }
 .logo-services{
   width: 465px;
   height: 500px;
-  flex-grow: 1;
+  flex: 1 1 50%;
   position: relative;
   bottom: 170px;
 }
@@ -715,17 +689,18 @@ a{
 }
 .rodape{
   background-image: linear-gradient(to bottom, #d92225, #991214);
-  margin-top: 684px;
+  margin-top: 674px;
 }
 .rodape > .rodape-itens{
   display: flex;
+  flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 10px;
 }
 .rodape .rodape-itens .rodape-wrap{
   color: #fff;
-  flex: 1 1 25%;
+  flex: 1 1 15%;
   margin-top: 100px;
   align-self: center;
   box-sizing: border-box;
@@ -783,7 +758,18 @@ a{
   font-size: 25px;
 }
 .rodape-wrap .rodape-form form input{
-  width: 258px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+.rodape-wrap .rodape-form form textarea{
+  width: 100%;
   border-radius: 5px;
   background-color: #ffffff;
   margin-bottom: 20px;
@@ -822,4 +808,23 @@ a{
   justify-content: space-around;
   width: 100%;
   display: flex;
+}
+
+@media (max-width:873px){
+
+  .slide .logo{
+    padding-top: 40px;
+    justify-content: center;
+  }
+}
+@media (max-width:871px){
+  .logo-services{
+    bottom: 0px;
+    flex: 1 1 100%;
+  }
+}
+@media(max-width:492px){
+  .logo-services{
+    margin-top: 60px;
+  }
 }

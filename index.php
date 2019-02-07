@@ -87,47 +87,55 @@
   <div class="news">
     <h3>notícias</h3>
     <div class="news-flex">
-      <div class="news-wrap -first-news">
-        <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-        <div class="news-caption">
-          <h4>título 01</h4>
-          <div class="date">01/01/2019</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus risus, tempor nec nulla eu, sodales vulputate sapien...</p>
-        </div>
-      </div>
+      <a href="#">
+          <div class="news-wrap -first-news">
+            <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
+            <div class="news-caption">
+              <h4>título 01</h4>
+              <div class="date">01/01/2019</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus risus, tempor nec nulla eu, sodales vulputate sapien...</p>
+            </div>
+          </div>
+        </a>
     </div>
 
     <div class="news-flex">
-      <div class="news-wrap">
-        <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-        <div class="news-caption">
-          <h4>título 01</h4>
-          <div class="date">01/01/2019</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus risus, tempor nec nulla eu, sodales vulputate sapien...</p>
-        </div>
-      </div>
+      <a href="#">
+          <div class="news-wrap">
+            <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
+            <div class="news-caption">
+              <h4>título 01</h4>
+              <div class="date">01/01/2019</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus risus, tempor nec nulla eu, sodales vulputate sapien...</p>
+            </div>
+          </div>
+        </a>
     </div>
 
     <div class="news-flex">
-      <div class="news-wrap">
-        <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-        <div class="news-caption">
-          <h4>título 01</h4>
-          <div class="date">01/01/2019</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus risus, tempor nec nulla eu, sodales vulputate sapien...</p>
-        </div>
-      </div>
+      <a href="#">
+          <div class="news-wrap">
+            <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
+            <div class="news-caption">
+              <h4>título 01</h4>
+              <div class="date">01/01/2019</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus risus, tempor nec nulla eu, sodales vulputate sapien...</p>
+            </div>
+          </div>
+        </a>
     </div>
 
     <div class="news-flex">
-      <div class="news-wrap">
-        <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-        <div class="news-caption">
-          <h4>título 01</h4>
-          <div class="date">01/01/2019</div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus risus, tempor nec nulla eu, sodales vulputate sapien...</p>
+      <a href="#">
+        <div class="news-wrap">
+          <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
+          <div class="news-caption">
+            <h4>título 01</h4>
+            <div class="date">01/01/2019</div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus risus, tempor nec nulla eu, sodales vulputate sapien...</p>
+          </div>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 
@@ -137,17 +145,21 @@
     <div class="divisor">  
       <div class="events-news">
         <div class="events-content">
-          <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-          <h4>título 01</h4>
-          <div>01/01/2019</div>
+          <a href="#">
+              <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
+              <h4>título 01</h4>
+              <div>01/01/2019</div>
+            </a>
         </div>  
       </div>
       
       <div class="events-news">
         <div class="events-content">
-          <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-          <h4>título 01</h4>
-          <div>01/01/2019</div>
+        <a href="#">
+            <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
+            <h4>título 01</h4>
+            <div>01/01/2019</div>
+          </a>
         </div>  
       </div>
     </div>
@@ -155,17 +167,21 @@
     <div class="divisor">
       <div class="events-news">
         <div class="events-content">
-          <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-          <h4>título 01</h4>
-          <div>01/01/2019</div>
+          <a href="#">
+            <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
+            <h4>título 01</h4>
+            <div>01/01/2019</div>
+          </a>
         </div>  
       </div>
 
       <div class="events-news">
         <div class="events-content">
-          <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-          <h4>título 01</h4>
-          <div>01/01/2019</div>
+          <a href="#">
+              <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
+              <h4>título 01</h4>
+              <div>01/01/2019</div>
+            </a>
         </div>  
       </div>
     </div>  
@@ -224,25 +240,27 @@
 
     </div>
   </div>
-  <script>
-    var map;
+  <script>    
 function initMap() {
+  var myLatLng = {lat: -14.617607, lng: -57.487095};
+
   map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -14.617607, lng: -57.487095},
     zoom: 8,
     scrollWheeler: false
   });
+  
+//function addMarker(lat, lng) {
+  //var marker = new.google.maps.Marker({
+   // position: myLatLng,
+    //map: map,
+    //title: 'Bem vindo a Terzi Empresas!'
+  //});
+//} 
+  
 }
 
-function addMarker(lat,long,icon,content){
-  var latLng = {'lat':lat, 'long':long};
 
-  var marker = new google.maps.Marker({
-    position: latLng,
-    map:map,
-    icon:icon
-  });
-}
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhIZwkLje5pSBv86PCKegoBirrW0AWtL4&callback=initMap"
     async defer></script>

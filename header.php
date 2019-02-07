@@ -45,11 +45,12 @@
       </div>
 
       <div class="logo">
-        <div class="logo-text">
-          <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="" class="logo-slide">
-          <h1><span class="-first-name">terzi</span> <span class="-second-name">empresas</span></h1>
+        
+            <div class="logo-text">
+            <h1><img src="<?php echo get_template_directory_uri(); ?>/img/logo-slide.png" alt="" class="logo-slide">
+              </h1>
+            </div>
+            <p>agronomia, consultoria, planejamento e responsabilidade</p>
+         
         </div>
-        <p>agronomia, consultoria, planejamento e responsabilidade</p>
-      </div>
-  
   </section>

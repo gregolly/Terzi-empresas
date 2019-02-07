@@ -21,7 +21,7 @@
           <form action="">
             <input type="text" placeholder="Nome">
             <input type="text" placeholder="(65) 99999-9999">
-            <input type="text" placeholder="Mensagem">
+            <textarea type="text" placeholder="Mensagem"></textarea>
             <button>enviar e-mail</button>
           </form>
         </div>
