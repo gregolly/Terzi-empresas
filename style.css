@@ -12,16 +12,20 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 *::selection{
   background-color: #b9de3e;
 }
+*{
+  box-sizing: border-box;
+}
+#content{
+  width: 230px;
+}
+#corpo{
+  width: 220px;
+}
 .container{
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
-}
-@media(max-width:800px){
-  .container{
-    width: 300px;
-  }
 }
 img{
   display: block;
@@ -126,7 +130,7 @@ a{
   height: 257px;
   padding-right: 120px;
   margin-right: 10px;
-  margin-left: 10px
+  margin-left: 10px;
 }
 .logo-text h1 img::after{
   content: '';
@@ -145,8 +149,6 @@ a{
   line-height: 1.09;
   text-transform: uppercase;
   align-self: center;
-  margin-right: 10px;
-  margin-left: 10px
 }
 /* .slide .logo h1::after{
   content: " ";
@@ -162,8 +164,8 @@ a{
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 80px 0;
-  margin-right: 10px;
-    margin-left: 10px
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .services{
   margin-top: 14px;
@@ -171,7 +173,6 @@ a{
 }
 .services-text{
   width: 426px;
-  height: 285px;
   font-family: 'Roboto', sans-serif;
   font-size: 51px;
   font-weight: bold;
@@ -375,7 +376,7 @@ a{
   margin-bottom: 140px;
 }
 .agreement h2{
-  width: 179px;
+  width: 191px;
   height: 51px;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
@@ -388,6 +389,7 @@ a{
   background-color: #d92225;
   display: inline-block;
   padding: 0px 15px;
+  margin-bottom: 20px;
 }
 .partners-agreement{
   max-width: 1200px;
@@ -496,7 +498,6 @@ a{
   font-style: italic;
   font-stretch: condensed;
   line-height: 51px;
-  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -522,7 +523,6 @@ a{
   font-weight: bold;
   font-stretch: condensed;
   line-height: 0.8;
-  letter-spacing: normal;;
   text-transform: uppercase;
   color: #000000;
   margin-top: 15px;
@@ -534,7 +534,6 @@ a{
   font-weight: bold;
   font-stretch: condensed;
   line-height: 1.19;
-  letter-spacing: normal;
   color: #000000;
 }
 .container > .price{
@@ -551,7 +550,6 @@ a{
   font-weight: bold;;
   font-stretch: condensed;
   line-height: 51px;
-  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -568,10 +566,9 @@ a{
   background-color: #d92225;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
-  font-weight: bold;;
+  font-weight: bold;
   font-stretch: condensed;
   line-height: 51px;
-  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -584,7 +581,6 @@ a{
   font-weight: bold;
   font-stretch: condensed;
   line-height: 1.7;
-  letter-spacing: normal;
 }
 .container .links ul li::before{
   content: '';
@@ -690,6 +686,8 @@ a{
 .rodape{
   background-image: linear-gradient(to bottom, #d92225, #991214);
   margin-top: 674px;
+  width: 100%;
+  padding: 120px 0;
 }
 .rodape > .rodape-itens{
   display: flex;
@@ -823,8 +821,112 @@ a{
     flex: 1 1 100%;
   }
 }
+@media(max-width:800px){
+  .container, .rodape > .rodape-itens{
+    max-width: 300px;
+  }
+
+  .logo-text{
+    padding-right: 0px;
+  }
+  .slide .logo p{
+    width: 280px;
+    font-size: 29px;
+  }
+  .logo-services{
+    width: 280px;
+  }
+  .container .summary-services{
+    margin-bottom: 50px;
+    flex: 1 1 100%;
+  }
+  .container .count-wrap{
+    margin-bottom: 50px;
+    flex: 1 1 100%;
+  }
+  .agreement{
+    margin-bottom: 0px;
+  }
+  .services-text{
+    flex: 1 1 100%;
+  }
+  .partners-agreement{
+    max-width: 300px;
+  }
+  .img-partners{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .blog > .news{
+    flex: 1 1 100%;
+  }
+  .blog .news .container-events{
+    flex: 1 1 100%;
+  }
+  .blog .news .news-wrap{
+    flex-wrap: wrap;
+  }
+  .blog .news .news-wrap .news-caption{
+    margin-top: 20px;
+  }
+  .container > .price{
+    flex: 1 1 100%;
+  }
+  .container .price .links{
+    flex: 1 1 100%;
+  }
+  .banner .container .phrase{
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .banner .container .logo-engineer{
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .banner .container .associated{
+    flex: 1 1 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  .rodape .rodape-itens .rodape-wrap{
+    margin-top: 25px;
+  }
+  .rodape-wrap .rodape-form form input{
+    width: 90%;
+  }
+  .rodape-wrap .rodape-form form textarea{
+    width: 90%;
+  }
+}
+@media(max-width: 512px){
+  .services .services-text{
+    font-size: 30px;
+    width: 280px;
+  }
+}
 @media(max-width:492px){
   .logo-services{
     margin-top: 60px;
+  }
+}
+@media(max-width:400px){
+  .logo-text{
+    width: 240px;
+    height: 150px;
+  }
+}
+@media(max-width: 335px){
+  .logo-text{
+    width: 280px;
+    height: 190px;
   }
 }

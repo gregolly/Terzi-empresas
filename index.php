@@ -192,11 +192,11 @@
   <div class="price">
     <h5>cotações</h5>
         <div class="cambio">
-          <iframe src="https://www.agron.com.br/widgets/dollar.php" width="290px;" height="220px;" scrolling="no" frameborder="0"></iframe>
+        <iframe src="https://www.precododolar.com/widgets/cotacao.php" width="250px;" height="300px;" scrolling="no" frameborder="0"></iframe>
         </div>
         <div class="prices">
-            <iframe src="https://www.agron.com.br/widgets/cotacao_interna.php" width="290px;" height="320px;" scrolling="no" frameborder="0"  align="middle"></iframe>
-        </div> 
+            <iframe src="https://www.agron.com.br/widgets/cotacao_interna.php" width="220px;" height="320px;" scrolling="no" frameborder="0"  align="middle"></iframe>
+        </div>
   </div>
   <div class="links">
   <h5>Links úteis</h5>
@@ -241,28 +241,20 @@
     </div>
   </div>
   <script>    
+// Initialize and add the map
 function initMap() {
-  var myLatLng = {lat: -14.617607, lng: -57.487095};
-
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -14.617607, lng: -57.487095},
-    zoom: 8,
-    scrollWheeler: false
-  });
-  
-//function addMarker(lat, lng) {
-  //var marker = new.google.maps.Marker({
-   // position: myLatLng,
-    //map: map,
-    //title: 'Bem vindo a Terzi Empresas!'
-  //});
-//} 
-  
+  // The location of Uluru
+  var uluru = {lat: -14.614470, lng: -57.482224};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 12, center: uluru});
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
 }
 
 
   </script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhIZwkLje5pSBv86PCKegoBirrW0AWtL4&callback=initMap"
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc4yTC-Cal6k6A5rFgYNXt6OwLNkKE-jM&callback=initMap"
     async defer></script>
 </section>
 
