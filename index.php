@@ -8,7 +8,7 @@
       reflorestamento
       laudos e perícias</p>
    
-      <img src="<?php echo get_template_directory_uri(); ?>/img/logo-cropped.png" alt="" class="logo-services">
+      <img src="<?php echo get_template_directory_uri(); ?>/img/logo-cropped.png" alt="" class="logo-services animated flipInX">
   </section>
 
   <section class="container">

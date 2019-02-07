@@ -28,29 +28,29 @@
   <section class="slide">
     
       <div class="nav-widgets">
-        <nav class="navigation">
+        <nav class="navigation animated bounceInLeft">
           <a href="#" class="action -first">as empresas</a>
           <a href="#" class="action">serviços</a>
           <a href="#" class="action">convênios</a>
           <a href="#" class="action">noticias</a>
           <a href="#" class="action">fale conosco</a>
         </nav>
-        <ul class="social-media">
+        <ul class="social-media animated bounceInRight">
             <a href="#" class="-icons"><i class="fab fa-facebook-f"></i></a>
             <a href="#" class="-icons"><i class="fab fa-instagram"></i></a>
             <a href="#" class="-icons"><i class="fab fa-youtube"></i></a>
             <a href="#" class="-icons"><i class="fab fa-linkedin"></i></a>
         </ul>
-        <a href="#" class="search"><i class="fas fa-search"></i></a>
+        <a href="#" class="search animated bounceInRight"><i class="fas fa-search"></i></a>
       </div>
 
       <div class="logo">
         
             <div class="logo-text">
-            <h1><img src="<?php echo get_template_directory_uri(); ?>/img/logo-slide.png" alt="" class="logo-slide">
+            <h1><img src="<?php echo get_template_directory_uri(); ?>/img/logo-slide.png" alt="" class="logo-slide animated bounceInLeft">
               </h1>
             </div>
-            <p>agronomia, consultoria, planejamento e responsabilidade</p>
+            <p class="animated bounceInRight">agronomia, consultoria, planejamento e responsabilidade</p>
          
         </div>
   </section>
