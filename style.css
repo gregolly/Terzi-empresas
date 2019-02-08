@@ -16,16 +16,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
   box-sizing: border-box;
 }
 #content{
-  width: 230px;
+  width: 150px !important;
 }
 #corpo{
-  width: 220px;
+  width: 150px !important;
 }
 .container{
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 img{
   display: block;
@@ -126,18 +127,11 @@ a{
   flex-wrap: wrap;
 }
 .logo-text{
-  width: 400px;
+  max-width: 500px;
   height: 257px;
   padding-right: 120px;
   margin-right: 10px;
   margin-left: 10px;
-}
-.logo-text h1 img::after{
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 100px;
-  background-color: #fff;
 }
 .slide .logo p{
   color: inherit;
@@ -150,14 +144,6 @@ a{
   text-transform: uppercase;
   align-self: center;
 }
-/* .slide .logo h1::after{
-  content: " ";
-  display: inline-block;
-  width: 2px;
-  height: 200px;
-  background-color: #fff;
-  margin-left: 120px;
-} */
 .services-container{
   max-width: 1000px;
   display: flex;
@@ -194,10 +180,10 @@ a{
 .summary-services{
   flex: 1 1 33.3%;
   position: relative;
+  align-self: baseline;
 }
 .summary-services  .img-summary-services{
   width: 250px;
-  height: 150px;
 }
 .summary-services .description-summary-services{
   width: 308px;
@@ -339,37 +325,30 @@ a{
 }
 .count{
   margin-bottom: 105px;
+  padding: 20px 0;
 }
 .count-wrap{
   flex: 1 1 25%;
 }
 .count-wrap > .num-count{
-  width: 166px;
-  height: 60px;
   font-family: 'Roboto', sans-serif;;
   font-size: 80px;
   font-weight: bold;
   font-style: italic;
   font-stretch: condensed;
   line-height: 0.54;
-  letter-spacing: normal;
-  text-align: left;
   color: #cfcfcf;
   list-style: none;
   margin-bottom: 30px;
 }
 .count-wrap .text-count{
-  width: 238px;
-  height: 57px;
-  font-family: 'Roboto', sans-serif;;
+  font-family: 'Roboto', sans-serif;
   font-size: 34.5px;
   font-weight: normal;
   font-style: italic;
-  font-stretch: condensed;
   line-height: 0.94;
-  letter-spacing: normal;
-  text-align: left;
   color: #000000;
+  text-transform: uppercase;
 }
 .agreement{
   text-align: center;
@@ -394,6 +373,7 @@ a{
 .partners-agreement{
   max-width: 1200px;
   margin: 0 auto;
+  overflow: hidden;
 }
 .partners-agreement img{
   display: inline-block;
@@ -555,6 +535,9 @@ a{
   color: #ffffff;
   margin-bottom: 25px;
 }
+.container .price .cambio, .container .price .prices{
+  display: inline-block;
+}
 .container .links{
   flex: 1 1 50%;
   padding: 50px;
@@ -680,14 +663,11 @@ a{
 	left: 0;
 	top:0;
   width: 100%;
-  height: 100%;
-  padding-top: 50%;
+  height: 400px;
 }
 .rodape{
   background-image: linear-gradient(to bottom, #d92225, #991214);
-  margin-top: 674px;
   width: 100%;
-  padding: 60px 0;
 }
 .rodape > .rodape-itens{
   display: flex;
@@ -695,6 +675,7 @@ a{
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 10px;
+  margin-top: 350px
 }
 .rodape .rodape-itens .rodape-wrap{
   color: #fff;
@@ -896,6 +877,9 @@ a{
     margin-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
+  }
+  .rodape > .rodape-itens{
+    margin-top: 500px;
   }
   .rodape .rodape-itens .rodape-wrap{
     margin-top: 25px;
