@@ -81,7 +81,7 @@
 
 <section class="container">
   <div class="price">
-    <h5><?php the_field('titilo-cotacao'); ?></h5>
+    <h5><?php the_field('titulo-cotacao'); ?></h5>
         <div class="cambio" width="200px">
           <iframe src="https://www.precododolar.com/widgets/cotacao.php" width="100%;" height="300px;" scrolling="no" frameborder="0"></iframe>
         </div>
@@ -117,11 +117,9 @@
 </section>
 
 <section class="map">
-  <div class="map-container">
     <div id="map">
 
     </div>
-  </div>
   <script>
     // Initialize and add the map
 function initMap() {

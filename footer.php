@@ -25,7 +25,7 @@
       </div>
 
         <div class="rodape-wrap">
-            <img src="<?php the_field('rodape-logo'); ?> alt="<?php the_field('rodape-logo-alt'); ?>">   
+            <img src="<?php the_field('rodape-logo'); ?>" alt="<?php the_field('rodape-logo-alt'); ?>">   
         </div>
     </div>
 
