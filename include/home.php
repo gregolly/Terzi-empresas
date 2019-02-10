@@ -11,5 +11,7 @@
             </div>
           </div>
         </a>
-    </article>
+</article>
+
+<?php get_sidebar(); ?>
 <?php endwhile; ?>

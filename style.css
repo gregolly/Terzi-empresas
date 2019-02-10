@@ -63,7 +63,7 @@ a{
   background-image: url('img/slide1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center 100%;
+  background-position: center center;
   position: relative;
   overflow: hidden;
 }
@@ -79,6 +79,7 @@ a{
   vertical-align: middle;
   position: relative;/* mudar para fixed*/
   z-index: 100;
+  align-items: baseline;
 }
 .slide .nav-widgets .navigation{
   line-height: 2;
@@ -360,8 +361,8 @@ a{
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   font-stretch: condensed;
+  font-weight: bold;
   line-height: 51px;
-  letter-spacing: normal;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -805,6 +806,12 @@ a{
 @media(max-width:800px){
   .container, .rodape > .rodape-itens{
     max-width: 300px;
+  }
+  .services-container{
+    max-width: 300px;
+  }
+  .services-container .services-text{
+    width: 280px;
   }
 
   .logo-text{

@@ -12,6 +12,8 @@ remove_action('wp_head', 'print_emoji_detection_script', 7);
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_styles', 'print_emoji_styles');
+
+//script head
 add_action('wp_enqueue_scripts', 'terzitema_add_script_header');
 
 function terzitema_add_script_header() {
@@ -21,32 +23,23 @@ function terzitema_add_script_header() {
   wp_enqueue_style('style-terzitema', get_stylesheet_directory_uri() . '/style.css');
 }
 
-//Adicionando jquery e removendo jquery padrão do wordpress
-add_action('init', 'modificar_jquery');
-
 //script rodape
-add_action('wp_rodape', 'terzi_add_script_rodape');
+add_action('wp_enqueue_scripts', 'terzi_add_script_rodape');
 
 function terzi_add_script_rodape(){
-  wp_enqueue_script('bakcground_slide', get_template_directory_uri() . '/js/background_slide.js');
-  wp_enqueue_script('slide-topo', get_template_directory_uri() . '/js/slideshow.min.js');
-}
-
-function modificar_jquery(){
-  if (!is_admin()){
-    wp_deregister_script('jquery');
-    wp_register_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', false, '3.3.1');
-    wp_enqueue_script('jquery');
-  }
+  wp_enqueue_script('jquery-plugin', get_stylesheet_directory_uri() . '/js/jquery.js');
+  wp_enqueue_script('background_slide', get_stylesheet_directory_uri() . '/js/background_slide.js');
+  wp_enqueue_script('contador', get_stylesheet_directory_uri() . '/js/count.js');
+  wp_deregister_script('jquery');
 }
 
 //registrar menu
-add_action('init', 'terzi_tema_action_init');
+//add_action('init', 'terzi_tema_action_init');
 
-function terzi_tema_action_init()
-{
-	register_nav_menu('terzi-menu-principal', 'Menu principal (cabeçalho)');
-}
+//function terzi_tema_action_init()
+//{
+	//register_nav_menu('terzi-menu-principal', 'Menu principal (cabeçalho)');
+//}
 
 
 //Adiciona suporte a miniaturas (imagem destacada)
