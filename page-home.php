@@ -9,17 +9,38 @@
   </section>
 
 <section class="container">
-  <?php if(have_rows('services-wrap')) : while(have_rows('services-wrap')) : the_row(); ?>
+ 
       <div class="summary-services">
-        <img src="<?php the_sub_field('services-img'); ?>" alt="<?php the_sub_field('services-img-alt'); ?>" class="img-summary-services"/>
-        <p class="description-summary-services"><?php the_sub_field('services-content'); ?></p>
+        <img src="<?php the_field('services-img'); ?>" alt="<?php the_field('services-img-alt'); ?>" class="img-summary-services"/>
+        <p class="description-summary-services"><?php the_field('services-content'); ?></p>
         <ul class="list-summary-services">
-          <li><?php the_sub_field('services-line'); ?></li>
+          <li><?php the_field('services-line'); ?></li>
         </ul>
-        <a href="#" class="button-summary-services-red"><?php the_sub_field('services-button'); ?></a>
-        <img src="<?php the_sub_field('services-button-img'); ?>" alt="imagem representando cada terzi-empresa" class="cured">
+        <a href="#" class="button-summary-services-red"><?php the_field('services-button'); ?></a>
+        <img src="<?php the_field('services-button-img'); ?>" alt="<?php the_field('services-button-img-alt'); ?>" class="cured">
       </div>
-  <?php endwhile; else: endif; ?>        
+
+      <div class="summary-services">
+        <img src="<?php the_field('services-img-blue'); ?>" alt="<?php the_sub_field('services-img-alt-blue'); ?>" class="img-summary-services"/>
+        <p class="description-summary-services"><?php the_field('services-content-blue'); ?></p>
+        <ul class="list-summary-services">
+          <li><?php the_field('services-line-blue'); ?></li>
+        </ul>
+        <a href="#" class="button-summary-services-blue"><?php the_field('services-button'); ?></a>
+        <img src="<?php the_field('services-button-img-blue'); ?>" alt="<?php the_field('services-button-img-alt-blue'); ?>" class="cublue">
+      </div>
+
+
+      <div class="summary-services">
+        <img src="<?php the_field('services-img-green'); ?>" alt="<?php the_sub_field('services-img-alt-green'); ?>" class="img-summary-services"/>
+        <p class="description-summary-services"><?php the_field('services-content-green'); ?></p>
+        <ul class="list-summary-services">
+          <li><?php the_field('services-line-green'); ?></li>
+        </ul>
+        <a href="#" class="button-summary-services-green"><?php the_field('services-button'); ?></a>
+        <img src="<?php the_field('services-button-img-green'); ?>" alt="<?php the_field('services-button-img-alt-green'); ?>" class="cugreen">
+      </div>
+       
 </section>
 
 <section class="container balls">
@@ -30,12 +51,13 @@
 <section class="container count">
 <?php if(have_rows('count-terzi')) : while (have_rows('count-terzi')) : the_row(); ?>
   <div class="count-wrap">
-    <li class="num-count count"><?php the_sub_field('count-number'); ?></li>
+    <li class="num-count"><span class="coun"><?php the_sub_field('count-number'); ?></span></li>
     <p class="text-count"><?php
     the_sub_field('count-name'); ?></p>
   </div>
 <?php endwhile; else: endif; ?>
 </section>
+
 <section class="agreement">
   <h2><?php the_field('titulo_convenios'); ?></h2>
   <div class="partners-agreement">
@@ -48,11 +70,12 @@
 
 <section class="blog">
   <div class="news">
-    <h3>notícias</h3>
+    <h3><?php the_field('titulo_news'); ?></h3>
     <?php get_template_part('includes/home'); ?>
   </div>
+
 <div class="container-events">
-  <h3>eventos</h3>
+  <h3><?php the_field('titulo_eventos'); ?></h3>
     <div class="divisor">  
       <div class="events-news">
         <div class="events-content">

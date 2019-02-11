@@ -3,14 +3,14 @@
     <div class="rodape-itens">
       <div class="rodape-wrap">
         <ul class="phones">
-          <li><i class="fas fa-phone"></i><?php the_field('phone-rodape'); ?></li>
-          <li><i class="far fa-clock"></i><?php the_field('horario-rodape'); ?></li>
+          <li><i class="fas fa-phone"></i><?php the_field('phone-rodape', 31); ?></li>
+          <li><i class="far fa-clock"></i><?php the_field('horario-rodape', 31); ?></li>
         </ul>
       </div>
 
       <div class="rodape-wrap rodape-wrap-adress">
-        <p><i class="fas fa-map-marker-alt"></i><?php the_field('endereco-rodape'); ?></p>
-        <p><i class="fas fa-envelope"></i><?php the_field('email-rodape'); ?></p>
+        <p><i class="fas fa-map-marker-alt"></i><?php the_field('endereco-rodape', 31); ?></p>
+        <p><i class="fas fa-envelope"></i><?php the_field('email-rodape', 31); ?></p>
       </div>
 
       <div class="rodape-wrap">
@@ -19,13 +19,13 @@
             <input type="text" placeholder="Nome">
             <input type="text" placeholder="(65) 99999-9999">
             <textarea type="text" placeholder="Mensagem"></textarea>
-            <button><?php the_field('button-form'); ?></button>
+            <button><?php the_field('button-form', 31); ?></button>
           </form>
         </div>
       </div>
 
         <div class="rodape-wrap">
-            <img src="<?php the_field('rodape-logo'); ?>" alt="<?php the_field('rodape-logo-alt'); ?>">   
+            <img src="<?php the_field('rodape-logo', 31); ?>" alt="<?php the_field('rodape-logo-alt', 31); ?>">   
         </div>
     </div>
 

@@ -14,7 +14,7 @@
   <header class="header">
     <ul class="container adress">
       <?php if(have_rows('endereco-header')) : while(have_rows('endereco-header')) : the_row() ?>
-      <li><?php the_sub_field('endereco-header-item'); ?></li>
+      <li><?php the_sub_field('endereco-header-item', 31); ?></li>
       <?php endwhile; else: endif; ?>
       <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/wp-login.png" alt="login para o painel administrativo do site"></a></li>
     <ul>
@@ -25,17 +25,17 @@
     
       <div class="nav-widgets">
         <nav class="navigation animated bounceInLeft">
-            <a href="#" class="action -first">as empresas</a>
-             <a href="#" class="action">serviços</a>
-            <a href="#" class="action">convênios</a>
-            <a href="#" class="action">noticias</a>
-            <a href="#" class="action">fale conosco</a>
+            <a href="#" id="empresas" class="action -first">as empresas</a>
+             <a href="#" id="serviços" class="action">serviços</a>
+            <a href="#" id="convenios" class="action">convênios</a>
+            <a href="#" id="noticias" class="action">noticias</a>
+            <a href="#" id="contato" class="action">fale conosco</a>
         </nav>
         <ul class="social-media animated bounceInRight">
-            <a href="<?php the_field('facebook');?>" class="-icons"><i class="fab fa-facebook-f"></i></a>
-            <a href="<?php the_field('instagram');?>" class="-icons"><i class="fab fa-instagram"></i></a>
-            <a href="<?php the_field('youtube');?>" class="-icons"><i class="fab fa-youtube"></i></a>
-            <a href="<?php the_field('linkedin');?>" class="-icons"><i class="fab fa-linkedin"></i></a>
+            <a href="<?php the_field('facebook', 31);?>" class="-icons"><i class="fab fa-facebook-f"></i></a>
+            <a href="<?php the_field('instagram', 31);?>" class="-icons"><i class="fab fa-instagram"></i></a>
+            <a href="<?php the_field('youtube', 31);?>" class="-icons"><i class="fab fa-youtube"></i></a>
+            <a href="<?php the_field('linkedin', 31);?>" class="-icons"><i class="fab fa-linkedin"></i></a>
         </ul>
         <a href="#" class="search animated bounceInRight"><i class="fas fa-search"></i></a>
       </div>
@@ -43,7 +43,7 @@
       <div class="logo">
         
             <div class="logo-text">
-            <h1><img src="<?php the_field('logo-terzi'); ?>" alt="<?php the_field('logo-terzi-alt'); ?>" class="logo-slide animated bounceInLeft">
+            <h1><img src="<?php the_field('logo-terzi', 31); ?>" alt="<?php the_field('logo-terzi-alt', 31); ?>" class="logo-slide animated bounceInLeft">
               </h1>
             </div>
             <p class="animated bounceInRight">agronomia, consultoria, planejamento e responsabilidade</p>

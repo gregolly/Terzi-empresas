@@ -30,6 +30,7 @@ function terzi_add_script_rodape(){
   wp_enqueue_script('jquery-plugin', get_stylesheet_directory_uri() . '/js/jquery.js');
   wp_enqueue_script('background_slide', get_stylesheet_directory_uri() . '/js/background_slide.js');
   wp_enqueue_script('contador', get_stylesheet_directory_uri() . '/js/count.js');
+  wp_enqueue_script('countUp', get_stylesheet_directory_uri() . '/js/countUp.js');
   wp_deregister_script('jquery');
 }
 

@@ -18,7 +18,7 @@ $(document).ready(function(){
   var intID = setInterval(changeImg, 6000);
 
   function changeImg(){
-    $('#slide').animate({opacity: 0}, 1000, function(){
+    $('#slide').animate({opacity: 0.9}, 1000, function(){
     $(this).css('background-image','url(' + preloadArr[currImg++%preloadArr.length].src +') top center no-repeat');
     }).animate({opacity: 1}, 1000);
    }
