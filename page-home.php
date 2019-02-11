@@ -71,7 +71,26 @@
 <section class="blog">
   <div class="news">
     <h3><?php the_field('titulo_news'); ?></h3>
-    <?php get_template_part('includes/home'); ?>
+    <?php
+        global $post;
+        $args = array( 'numberposts' => 6 );
+        $myposts = get_posts( $args );
+        foreach( $myposts as $post ) : setup_postdata($post); 
+    ?>
+    <article class="news-flex">
+      <a href="<?php the_permalink(); ?>">
+          <div class="news-wrap -first-news">
+            <?php the_post_thumbnail('news-thumbnail'); ?>
+            <div class="news-caption">
+            <h4><?php the_title(); ?><?php the_excerpt(); ?></h4>
+              <div class="date"><?php the_time('d/m/y'); ?></div>
+              <?php the_category(', '); ?>
+            </div>
+          </div>
+        </a>
+</article>
+<?php endforeach;  ?>
+<?php wp_reset_postdata(); ?>
   </div>
 
 <div class="container-events">
@@ -79,10 +98,13 @@
     <div class="divisor">  
       <div class="events-news">
         <div class="events-content">
-          <a href="#">
-              <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-              <h4>título 01</h4>
-              <div>01/01/2019</div>
+          <a href="<?php the_permalink(); ?>">
+          <?php $Eventos1 = new WP_Query([
+            'posts_per_page' => 3,
+            'post_type' => 'eventos1'
+        ]); 
+
+        ?>
             </a>
         </div>  
       </div>
@@ -92,9 +114,12 @@
       <div class="events-news">
         <div class="events-content">
           <a href="#">
-            <img src="<?= get_template_directory_uri(); ?>/img/garden.jpg" alt="">
-            <h4>título 01</h4>
-            <div>01/01/2019</div>
+          <?php $Eventos2 = new WP_Query([
+            'posts_per_page' => 3,
+            'post_type' => 'envetos2'
+        ]); 
+
+        ?>
           </a>
         </div>  
       </div>

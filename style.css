@@ -232,7 +232,6 @@ a{
   font-style: italic;
   font-stretch: condensed;
   line-height: 1.06;
-  letter-spacing: normal;
   text-align: center;
   color: #000000;
   display: block;
@@ -250,7 +249,6 @@ a{
   font-style: italic;
   font-stretch: condensed;
   line-height: 1.06;
-  letter-spacing: normal;
   text-align: center;
   color: #000000;
   display: block;
@@ -414,12 +412,12 @@ a{
 .blog .news .news-wrap.-first-news{
   margin-top: 38px;
 }
+.blog .news .news-wrap .news-caption{
+  margin-left: 20px;
+}
 .blog .news .news-wrap img{
-  width: 156px;
-  height: 125px;
   border-bottom-left-radius: 50px;
   border-top-right-radius: 50px;
-  margin-right: 24px;
 }
 .blog .news .news-wrap h4{
   font-family: 'Roboto', sans-serif;
@@ -789,7 +787,24 @@ a{
   width: 100%;
   display: flex;
 }
-
+.header.-interno{
+  background-color: rgba(82, 77, 77, 0.7);
+}
+.header .container.header-interno{
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  vertical-align: middle;
+}
+.header .container.header-interno nav .action{
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  padding-right: 20px;
+}
+.header .container.header-interno nav .action:hover{
+  color: #000;
+}
 @media (max-width:873px){
 
   .slide .logo{

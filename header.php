@@ -13,9 +13,9 @@
 <body>
   <header class="header">
     <ul class="container adress">
-      <?php if(have_rows('endereco-header')) : while(have_rows('endereco-header')) : the_row() ?>
-      <li><?php the_sub_field('endereco-header-item', 31); ?></li>
-      <?php endwhile; else: endif; ?>
+      <li><?php the_field('telefone-header-item', 31); ?></li>
+      <li><?php the_field('endereco-header-item', 31); ?></li>
+      <li><?php the_field('email-header-item', 31); ?></li>
       <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/wp-login.png" alt="login para o painel administrativo do site"></a></li>
     <ul>
       
