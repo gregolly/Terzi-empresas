@@ -1,15 +1,15 @@
 <?php
 
-if (! is_active_sidebar('tw-sidebar')) {
+if (! is_active_sidebar('terzi-empresas-sidebar')) {
 	return;
 }
 
 ?>
 <!-- sidebar -->
-<aside class="col-sm-3 col-xs-12 blog-sidebar well">
+<aside class="aside-container">
 
-<ul class="list-unstyled">
-  <?php dynamic_sidebar('tw-sidebar'); ?>
+<ul class="unstyled-list">
+  <?php dynamic_sidebar('terzi-empresas-sidebar'); ?>
 </ul>
 </aside>
 <!--/sidebar -->

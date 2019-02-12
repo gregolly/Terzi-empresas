@@ -12,8 +12,9 @@
 </head>
 <body>
   <header class="header -interno">
+    <div class="overlay"></div>
     <div class="container header-interno">
-        <img src="<?= get_template_directory_uri(); ?>/img/logo-rodape.png" alt="">
+        <a href="#"><img src="<?= get_template_directory_uri(); ?>/img/logo-rodape.png" alt=""></a>
             <nav class="navigation animated bounceInLeft">
                 <a href="#" id="empresas" class="action -first">Home</a>
                 <a href="#" id="noticias" class="action">noticias</a>

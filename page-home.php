@@ -2,7 +2,7 @@
 //Template name: Home
 ?>
 
-<section class="services services-container" id="serviços">
+<section class="services services-container" id="servicos">
     <p class="services-text"><?php the_field('texto-services'); ?></p>
    
       <img src="<?php the_field('image-services'); ?>" alt="<?php the_field('image-services-alt'); ?>" class="logo-services animated flipInX"/>
@@ -68,7 +68,7 @@
 </section>
 
 
-<section class="blog">
+<section class="blog" id="noticias">
   <div class="news">
     <h3><?php the_field('titulo_news'); ?></h3>
     <?php
@@ -88,20 +88,20 @@
               <span class="category"><?php the_category(', '); ?></span>
             </div>
           </div>
-        
 </article>
 <?php endforeach;  ?>
 <?php wp_reset_postdata(); ?>
+<a href="/noticias" class="button-noticia">leia mais</a>
   </div>
 
 <div class="container-events">
   <h3><?php the_field('titulo_eventos'); ?></h3>
-  <?php $Eventos1 = new WP_Query([
+  <?php $Eventos = new WP_Query([
             'posts_per_page' => 6,
-            'post_type' => 'eventos1'
+            'post_type' => 'eventos'
         ]); 
           
-        while($Eventos1->have_posts()) : $Eventos1->the_post();
+        while($Eventos->have_posts()) : $Eventos->the_post();
         ?>
     <a href="<?php the_permalink(); ?>">
       <div class="events-posts"> 

@@ -1,4 +1,4 @@
-<footer class="rodape" id="#contato">
+<footer class="rodape" id="contato">
   
     <div class="rodape-itens">
       <div class="rodape-wrap">
@@ -43,6 +43,7 @@
     </div>
   </div>
 </div>
+<a href="#" class="gotopbtn"><i class="fas fa-arrow-up"></i></a>
   <?php wp_footer(); ?>
 </body>
 </html>

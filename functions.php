@@ -1,5 +1,24 @@
 <?php
-// Coloque o código abaixo no arquivo functions.php do seu tema. O número 80 é a quantidade de caracteres a exibir.
+
+register_sidebar([
+	'name'			=> 'Barra Lateral (Sidebar)',
+	'id'			=> 'terzi-empresas-sidebar',
+	'description'	=> 'Área lateral de sidebar',
+	'before_title'	=> '<h4>',
+	'after_title'	=> '</h4>'
+]);
+
+//register custom navigation walker
+require_once('wp_terzi_empresas_pagination.php');
+function wp_terzi_empresas_pagination($args) {
+    
+	$args['previous_string'] = 'anterior';
+	$args['next_string'] = 'próximo';
+	
+	return $args;
+}
+
+// Coloque o código abaixo no arquivo functions.php do seu tema. O número 50 é a quantidade de caracteres a exibir.
 function wpdev_custom_excerpt_length( $length ) {
   return 30;
  }
@@ -85,57 +104,30 @@ function terzi_empresas_action_init(){
 
 function terzi_empresas_registrar_custom_post_type() {
 
-	$descritivosEventos1 = array(
-		'name' => 'Eventos1',
-		'singular_name' => 'Eventos1',
-		'add_new' => 'Adicionar Novo Eventos1',
-		'add_new_item' => 'Adicionar Eventos1',
-		'edit_item' => 'Editar Eventos1',
-		'new_item' => 'Novo Eventos1',
-		'view_item' => 'Ver Eventos1',
-		'search_items' => 'Procurar Eventos1',
-		'not_found' =>  'Nenhum Eventos1 encontrado',
-		'not_found_in_trash' => 'Nenhum Eventos1 na Lixeira',
+	$descritivosEventos = array(
+		'name' => 'Eventos',
+		'singular_name' => 'Eventos',
+		'add_new' => 'Adicionar Novo Eventos',
+		'add_new_item' => 'Adicionar Eventos',
+		'edit_item' => 'Editar Eventos',
+		'new_item' => 'Novo Eventos',
+		'view_item' => 'Ver Eventos',
+		'search_items' => 'Procurar Eventos',
+		'not_found' =>  'Nenhum Eventos encontrado',
+		'not_found_in_trash' => 'Nenhum Eventos na Lixeira',
 		'parent_item_colon' => '',
-		'menu_name' => 'Eventos1'
+		'menu_name' => 'Eventos'
 	);
 
-	$argsEventos1 = array(
-		'labels' => $descritivosEventos1,  //Insere o Array de labels dentro do argumento de labels
+	$argsEventos = array(
+		'labels' => $descritivosEventos,  //Insere o Array de labels dentro do argumento de labels
 		'public' => true,  //Se o Custom Type pode ser adicionado aos menus e exibidos em buscas
 		'hierarchical' => false,  //Se o Custom Post pode ser hierarquico como as páginas
 		'menu_position' => 5,  //Posição do menu que será exibido
 		'supports' => array('title','editor','thumbnail', 'custom-fields', 'revisions') //Quais recursos serão usados (metabox)
     );
 
-	register_post_type( 'Eventos1' , $argsEventos1 );
-
-	$descritivosEventos2 = array(
-		'name' => 'Eventos2',
-		'singular_name' => 'Eventos2',
-		'add_new' => 'Adicionar Novo Eventos2',
-		'add_new_item' => 'Adicionar Eventos2',
-		'edit_item' => 'Editar Eventos2',
-		'new_item' => 'Novo Eventos2',
-		'view_item' => 'Ver Eventos2',
-		'search_items' => 'Procurar Eventos2',
-		'not_found' =>  'Nenhum Eventos2 encontrado',
-		'not_found_in_trash' => 'Nenhum Eventos2 na Lixeira',
-		'parent_item_colon' => '',
-		'menu_name' => 'Eventos2'
-	);
-
-	$argsEventos2 = array(
-		'labels' => $descritivosEventos2,  //Insere o Array de labels dentro do argumento de labels
-		'public' => true,  //Se o Custom Type pode ser adicionado aos menus e exibidos em buscas
-		'hierarchical' => false,  //Se o Custom Post pode ser hierarquico como as páginas
-		'menu_position' => 5,  //Posição do menu que será exibido
-		'supports' => array('title','editor','thumbnail', 'custom-fields', 'revisions') //Quais recursos serão usados (metabox)
-
-    );
-
-	register_post_type( 'Eventos2' , $argsEventos2 );
-
+	register_post_type( 'Eventos' , $argsEventos );
 
 	flush_rewrite_rules();
 }
