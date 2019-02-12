@@ -2,13 +2,13 @@
 //Template name: Home
 ?>
 
-<section class="services services-container">
+<section class="services services-container" id="serviços">
     <p class="services-text"><?php the_field('texto-services'); ?></p>
    
       <img src="<?php the_field('image-services'); ?>" alt="<?php the_field('image-services-alt'); ?>" class="logo-services animated flipInX"/>
   </section>
 
-<section class="container">
+<section class="container" id="empresas">
  
       <div class="summary-services">
         <img src="<?php the_field('services-img'); ?>" alt="<?php the_field('services-img-alt'); ?>" class="img-summary-services"/>
@@ -58,7 +58,7 @@
 <?php endwhile; else: endif; ?>
 </section>
 
-<section class="agreement">
+<section class="agreement" id="convenios">
   <h2><?php the_field('titulo_convenios'); ?></h2>
   <div class="partners-agreement">
 <?php if(have_rows('partners_container')) : while(have_rows('partners_container')) : the_row(); ?>
@@ -73,7 +73,7 @@
     <h3><?php the_field('titulo_news'); ?></h3>
     <?php
         global $post;
-        $args = array( 'numberposts' => 6 );
+        $args = array( 'numberposts' => 4 );
         $myposts = get_posts( $args );
         foreach( $myposts as $post ) : setup_postdata($post); 
     ?>
@@ -83,11 +83,12 @@
             <?php the_post_thumbnail('news-thumbnail'); ?>
             <div class="news-caption">
             <h4><?php the_title(); ?><?php the_excerpt(); ?></h4>
+      </a> 
               <div class="date"><?php the_time('d/m/y'); ?></div>
-              <?php the_category(', '); ?>
+              <span class="category"><?php the_category(', '); ?></span>
             </div>
           </div>
-        </a>
+        
 </article>
 <?php endforeach;  ?>
 <?php wp_reset_postdata(); ?>
@@ -95,36 +96,24 @@
 
 <div class="container-events">
   <h3><?php the_field('titulo_eventos'); ?></h3>
-    <div class="divisor">  
-      <div class="events-news">
-        <div class="events-content">
-          <a href="<?php the_permalink(); ?>">
-          <?php $Eventos1 = new WP_Query([
-            'posts_per_page' => 3,
+  <?php $Eventos1 = new WP_Query([
+            'posts_per_page' => 6,
             'post_type' => 'eventos1'
         ]); 
-
+          
+        while($Eventos1->have_posts()) : $Eventos1->the_post();
         ?>
-            </a>
-        </div>  
+    <a href="<?php the_permalink(); ?>">
+      <div class="events-posts"> 
+            <?php the_post_thumbnail('news-thumbnail'); ?>
+            <h4><?php the_title(); ?></h4>
+            <div class="date"><?php the_time('d/m/y'); ?></div>
       </div>
-    </div>
-
-    <div class="divisor">
-      <div class="events-news">
-        <div class="events-content">
-          <a href="#">
-          <?php $Eventos2 = new WP_Query([
-            'posts_per_page' => 3,
-            'post_type' => 'envetos2'
-        ]); 
-
-        ?>
-          </a>
-        </div>  
-      </div>
-    </div>  
+    </a> 
+    <?php endwhile; ?>
+  
 </div><!-- fim do container -->    
+<?php wp_reset_postdata(); ?>
 </section>
 
 <section class="container">

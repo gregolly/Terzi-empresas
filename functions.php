@@ -1,7 +1,7 @@
 <?php
 // Coloque o código abaixo no arquivo functions.php do seu tema. O número 80 é a quantidade de caracteres a exibir.
 function wpdev_custom_excerpt_length( $length ) {
-  return 10;
+  return 30;
  }
  add_filter( 'excerpt_length', 'wpdev_custom_excerpt_length');
 
@@ -45,6 +45,8 @@ function terzi_add_script_rodape(){
 //{
 	//register_nav_menu('terzi-menu-principal', 'Menu principal (cabeçalho)');
 //}
+
+add_theme_support( 'post-formats', [ 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'] );
 
 
 //Adiciona suporte a miniaturas (imagem destacada)
@@ -128,7 +130,8 @@ function terzi_empresas_registrar_custom_post_type() {
 		'public' => true,  //Se o Custom Type pode ser adicionado aos menus e exibidos em buscas
 		'hierarchical' => false,  //Se o Custom Post pode ser hierarquico como as páginas
 		'menu_position' => 5,  //Posição do menu que será exibido
-		'supports' => array('title','thumbnail') //Quais recursos serão usados (metabox)
+		'supports' => array('title','editor','thumbnail', 'custom-fields', 'revisions') //Quais recursos serão usados (metabox)
+
     );
 
 	register_post_type( 'Eventos2' , $argsEventos2 );
@@ -136,4 +139,5 @@ function terzi_empresas_registrar_custom_post_type() {
 
 	flush_rewrite_rules();
 }
+
 ?>

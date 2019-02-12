@@ -1,4 +1,4 @@
-<footer class="rodape">
+<footer class="rodape" id="#contato">
   
     <div class="rodape-itens">
       <div class="rodape-wrap">

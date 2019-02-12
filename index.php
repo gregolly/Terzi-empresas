@@ -4,12 +4,12 @@
 
 <article>
 	<section class="introducao-interna introducao-geral">
-		<div class="container">
+		<div class="container-geral">
 			<h1><?php the_title(); ?></h1>
 		</div>
 	</section>
 
-	<section class="container conteudo-geral">
+	<section class="container-geral conteudo-geral">
 		<div class="grid-8">
 			<?php the_content(); ?>
 		</div>
