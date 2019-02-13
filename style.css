@@ -869,12 +869,12 @@ a{
     max-width: 300px;
   }
   .container-blog{
-    float: none;
-    width: 100%;
+    float: none !important;
+    width: 100% !important;
   }
   .aside-container{
-    float: none;
-    width: 100%;
+    float: none !important;
+    width: 100% !important;
   }
   .services-container{
     max-width: 300px;
