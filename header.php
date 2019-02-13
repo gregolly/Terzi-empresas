@@ -37,6 +37,7 @@
             <a href="<?php the_field('youtube', 31);?>" class="-icons"><i class="fab fa-youtube"></i></a>
             <a href="<?php the_field('linkedin', 31);?>" class="-icons"><i class="fab fa-linkedin"></i></a>
         </ul>
+        <input type="text" name="s" value="<?php echo get_search_query(); ?>" class="form-control" placeholder="Buscar...">
         <a href="#" class="search animated bounceInRight"><i class="fas fa-search"></i></a>
       </div>
 

@@ -1,31 +1,37 @@
 <?php get_header('interno'); 
 
-while(have_posts()) : the_post(); 
 //Template name: Notícias
 
 ?>
 <div class="container-blog">
 
-  <article class="news-flex-interno">
-        <a href="<?php the_permalink(); ?>">
-        <div class="row">
-          <h4><?php the_title(); ?></h4>
-            <div class="news-wrap-interno -first-news">
-              <?php the_post_thumbnail('blog-images'); ?>
-              <div class="news-caption-interno">
-              <?php echo the_excerpt(); ?>
-                <div class="date"><?php the_time('d/m/y'); ?></div>
-                <?php the_category(', '); ?>
-              </div>
-            </div>
-        </div>      
-        </a>
-        
-  </article>
+  <div class="row">
+  <?php while(have_posts()) : the_post(); ?> 
+    <div class="container-direction-blog">
+      <article class="news-flex-interno">
+            <a href="<?php the_permalink(); ?>">
+           
+              <h4><?php the_title(); ?></h4>
+                <div class="news-wrap-interno -first-news">
+                  <?php the_post_thumbnail('blog-images'); ?>
+                  <div class="news-caption-interno">
+                  <?php echo the_excerpt(); ?>
+                    <div class="date"><?php the_time('d/m/y'); ?></div>
+                    <?php the_category(', '); ?>
+                  </div>
+                </div>
+                
+            </a>
+      </article>
+  </div>
+  <?php endwhile; ?>
+</div>  
+
   
-  <?php get_sidebar(); ?>
+  
+
 </div>
-<?php endwhile; ?>
+<?php get_sidebar(); ?> 
 
   
 

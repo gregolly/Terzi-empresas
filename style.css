@@ -682,6 +682,7 @@ a{
 .rodape{
   background-image: linear-gradient(to bottom, #d92225, #991214);
   width: 100%;
+  clear: both;
 }
 .rodape > .rodape-itens{
   display: flex;
@@ -867,6 +868,14 @@ a{
   .container, .rodape > .rodape-itens{
     max-width: 300px;
   }
+  .container-blog{
+    float: none;
+    width: 100%;
+  }
+  .aside-container{
+    float: none;
+    width: 100%;
+  }
   .services-container{
     max-width: 300px;
   }
@@ -1041,27 +1050,77 @@ html{
     height: 100%;
 }
 .aside-container{
-  max-width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 25%;
+  float: left;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+}
+.aside-container .unstyled-list{
+  list-style: none;
+}  
+.aside-container .unstyled-list #categories-3 h4{
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Playfair Display', serif;
+  color: #2a2a2a;
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+.aside-container .unstyled-list #categories-3 .cat-item{
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #272532;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.aside-container .unstyled-list #categories-3 .cat-item a{
+  color: #000;
+}
+.aside-container .unstyled-list #recent-posts-3 h4{
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Playfair Display', serif;
+  color: #2a2a2a;
+  font-size: 42px;
+  line-height: 1.2;
+  letter-spacing: 0px;
 }
 .container-blog{
-  display: flex;
-  margin-top: 150px;
+  /*width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;*/
+  float: left;
+  width: 75%;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.container-direction-blog{
+  margin: 0 auto;
 }
 .container-blog article{
   border-bottom: 1px solid #000;
 }
+
 .news-flex-interno{
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 .row{
-  margin-left: -15px;
-  margin-right: -15px;
+ /* display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;*/
 }
 .news-flex-interno .row h4{
   font-weight: 400;
