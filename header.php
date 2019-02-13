@@ -25,11 +25,15 @@
     
       <div class="nav-widgets">
         <nav class="navigation animated bounceInLeft">
-            <a href="#empresas" class="action -first">as empresas</a>
-             <a href="#servicos" class="action">serviços</a>
-            <a href="#convenios" class="action">convênios</a>
-            <a href="#noticias" class="action">noticias</a>
-            <a href="#contato" class="action">fale conosco</a>
+          <a href="#menu" id="menu"><i class="fas fa-align-justify"></i></a>
+          <ul>
+            <li><a href="#empresas" class="action -first">as empresas</a></li>
+            <li><a href="#servicos" class="action">serviços</a></li>
+            <li><a href="#convenios" class="action">convênios</a></li>
+            <li><a href="#noticias" class="action">noticias</a></li>
+            <li><a href="#contato" class="action">fale conosco</a></li>
+          </ul>
+             
         </nav>
         <ul class="social-media animated bounceInRight">
             <a href="<?php the_field('facebook', 31);?>" class="-icons"><i class="fab fa-facebook-f"></i></a>

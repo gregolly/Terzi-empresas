@@ -80,6 +80,10 @@ a{
 .slide .medias.-icons{
   width: 100px;
 }
+#menu i{
+  font-size: 24px;
+  color: #fff;
+}
 .slide .nav-widgets{
   display: flex;
   flex-wrap: wrap;
@@ -93,6 +97,9 @@ a{
 }
 .slide .nav-widgets .navigation{
   line-height: 2;
+}
+.slide .nav-widgets .navigation ul{
+  display: inline-flex;
 }
 .slide .nav-widgets .navigation .action{
   font-family: 'Roboto', sans-serif;
@@ -851,6 +858,13 @@ a{
   left: 0;
   top: 0;
 }
+
+@media(max-width:1065px){
+  .count .count-wrap .text-count{
+    font-size: 1.5em;
+  }
+}
+
 @media (max-width:873px){
 
   .slide .logo{
@@ -867,6 +881,7 @@ a{
 @media(max-width:800px){
   .container, .rodape > .rodape-itens{
     max-width: 300px;
+    flex-direction: column;
   }
   .container-blog{
     float: none !important;
@@ -882,9 +897,22 @@ a{
   .services-container .services-text{
     width: 280px;
   }
-
+  .header > .adress{
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+  }
+  .header > .adress li{
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+  .header > .adress li img {
+    margin: 0 auto;
+  }
   .logo-text{
     padding-right: 0px;
+    max-width: 300px;
+    height: 200px;
   }
   .slide .logo p{
     width: 280px;
@@ -906,6 +934,7 @@ a{
   }
   .services-text{
     flex: 1 1 100%;
+    font-size: 30px;
   }
   .partners-agreement{
     max-width: 300px;
@@ -955,7 +984,7 @@ a{
     padding-left: 10px;
   }
   .rodape > .rodape-itens{
-    margin-top: 500px;
+    margin-top: 400px;
   }
   .rodape .rodape-itens .rodape-wrap{
     margin-top: 25px;
