@@ -22,7 +22,10 @@
   </header>
 
   <section class="slide" id="slide">
-  <a href="#menu" id="menu" ><i class="fas fa-align-justify"></i></a>
+  <div class="button">
+    <a href="#menu" id="btn-open" ><i class="fas fa-align-right"></i></a>
+  </div>
+  <div class="overlay-menu">
       <div class="nav-widgets">
         <nav class="navigation animated bounceInLeft">
           <ul>
@@ -45,7 +48,7 @@
           <input class="search-input" type="text" name="s" value="<?php echo get_search_query(); ?>" class="form-control" placeholder="Buscar...">
         </form>
       </div>
-
+    </div> 
       <div class="logo">
         
             <div class="logo-text">
@@ -55,6 +58,6 @@
             <p class="animated bounceInRight">agronomia, consultoria, planejamento e responsabilidade</p>
          
         </div>
-  <div class="overlay-menu"></div>      
+         
   </section>
 

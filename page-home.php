@@ -91,7 +91,7 @@
 </article>
 <?php endforeach;  ?>
 <?php wp_reset_postdata(); ?>
-<a href="/noticias" class="button-noticia">leia mais</a>
+<a href="/noticias" class="btn btn1">leia mais</a>
   </div>
 
 <div class="container-events">
