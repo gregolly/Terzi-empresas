@@ -53,7 +53,9 @@ function terzi_add_script_rodape(){
   wp_enqueue_script('jquery-plugin', get_stylesheet_directory_uri() . '/js/jquery.js');
   wp_enqueue_script('background_slide', get_stylesheet_directory_uri() . '/js/background_slide.js');
   wp_enqueue_script('contador', get_stylesheet_directory_uri() . '/js/count.js');
-  wp_enqueue_script('countUp', get_stylesheet_directory_uri() . '/js/countUp.js');
+	wp_enqueue_script('countUp', get_stylesheet_directory_uri() . '/js/countUp.js');
+	wp_enqueue_script('search-form', get_stylesheet_directory_uri() . '/js/search.js');
+	wp_enqueue_script('menu-overlay', get_stylesheet_directory_uri() . '/js/menu-responsive.js');
   wp_deregister_script('jquery');
 }
 
@@ -131,5 +133,21 @@ function terzi_empresas_registrar_custom_post_type() {
 
 	flush_rewrite_rules();
 }
-
+//customizar paginas de login
+function custom_login_css() {
+	echo '<link rel="stylesheet" type="text/css" href="'.get_stylesheet_directory_uri().'/style.css"/>';
+	}
+	add_action('login_head', 'custom_login_css');
+	
+/*Função que altera a URL, trocando pelo endereço do seu site*/
+function my_login_logo_url() {
+	return get_bloginfo( 'url' );
+	}
+	add_filter( 'login_headerurl', 'my_login_logo_url' );
+	 
+	/*Função que adiciona o nome do seu site, no momento que o mouse passa por cima da logo*/
+	function my_login_logo_url_title() {
+	return 'Nome do seu site - Voltar para Home';
+	}
+	add_filter( 'login_headertitle', 'my_login_logo_url_title' );	
 ?>

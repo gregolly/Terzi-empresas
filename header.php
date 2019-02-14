@@ -22,10 +22,9 @@
   </header>
 
   <section class="slide" id="slide">
-    
+  <a href="#menu" id="menu" ><i class="fas fa-align-justify"></i></a>
       <div class="nav-widgets">
         <nav class="navigation animated bounceInLeft">
-          <a href="#menu" id="menu"><i class="fas fa-align-justify"></i></a>
           <ul>
             <li><a href="#empresas" class="action -first">as empresas</a></li>
             <li><a href="#servicos" class="action">serviços</a></li>
@@ -41,8 +40,10 @@
             <a href="<?php the_field('youtube', 31);?>" class="-icons"><i class="fab fa-youtube"></i></a>
             <a href="<?php the_field('linkedin', 31);?>" class="-icons"><i class="fab fa-linkedin"></i></a>
         </ul>
-        <input type="text" name="s" value="<?php echo get_search_query(); ?>" class="form-control" placeholder="Buscar...">
-        <a href="#" class="search animated bounceInRight"><i class="fas fa-search"></i></a>
+        <form role="search" method="get" action="<?php bloginfo('home'); ?>">
+          <a href="#" class="search animated bounceInRight"><i class="fas fa-search"></i></a>
+          <input class="search-input" type="text" name="s" value="<?php echo get_search_query(); ?>" class="form-control" placeholder="Buscar...">
+        </form>
       </div>
 
       <div class="logo">
@@ -54,5 +55,6 @@
             <p class="animated bounceInRight">agronomia, consultoria, planejamento e responsabilidade</p>
          
         </div>
+  <div class="overlay-menu"></div>      
   </section>
 

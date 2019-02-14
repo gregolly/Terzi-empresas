@@ -24,6 +24,12 @@ html{
 #corpo{
   width: 150px !important;
 }
+#menu{
+  position: relative;
+  top: 10px;
+  left: 10px;
+  display: inline-block;
+}
 .rl-loading{
   opacity: 1 !important;
 }
@@ -66,6 +72,11 @@ a{
 }
 .header > .adress li img{
   width: 9px;
+}
+.search-input{
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
 }
 .slide{
   width: 100%;
@@ -351,7 +362,6 @@ a{
   font-size: 80px;
   font-weight: bold;
   font-style: italic;
-  font-stretch: condensed;
   line-height: 0.54;
   color: #cfcfcf;
   list-style: none;
@@ -802,6 +812,7 @@ a{
   line-height: 50px;
   color: #fff;
   font-size: 22px;
+  border-radius: 4px;
 }
 .copy-dev{
   padding: 30px 0;
@@ -858,10 +869,46 @@ a{
   left: 0;
   top: 0;
 }
-
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: #53bef6;
+}
+::-webkit-scrollbar-thumb {
+  background: #53bef6;
+}
 @media(max-width:1065px){
   .count .count-wrap .text-count{
     font-size: 1.5em;
+  }
+}
+@media(max-width: 1024px){
+  .slide > .nav-widgets{
+    display: none;
+  }
+  .slide > .nav-widgets{
+    position: absolute;
+    top: 6px;
+    right: -10px;
+    z-index: 999;
+    display: inline;
+    font-size: 32px;
+    text-align: center;
+  }
+  .slide .nav-widgets .navigation ul{
+    display: block;
+  }
+  .overlay-menu{
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    display: none;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    background: #333;
   }
 }
 
@@ -881,7 +928,6 @@ a{
 @media(max-width:800px){
   .container, .rodape > .rodape-itens{
     max-width: 300px;
-    flex-direction: column;
   }
   .container-blog{
     float: none !important;
@@ -928,6 +974,7 @@ a{
   .container .count-wrap{
     margin-bottom: 50px;
     flex: 1 1 100%;
+    text-align: center;
   }
   .agreement{
     margin-bottom: 0px;
@@ -955,6 +1002,10 @@ a{
   }
   .blog .news .news-wrap .news-caption{
     margin-top: 20px;
+  }
+  .container-events .events-posts{
+    float: none;
+    width: 100%;
   }
   .container > .price{
     flex: 1 1 100%;
@@ -994,6 +1045,13 @@ a{
   }
   .rodape-wrap .rodape-form form textarea{
     width: 90%;
+  }
+  .gotopbtn{
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    bottom: 15px;
+    right: 15px;
   }
 }
 @media(max-width: 512px){
