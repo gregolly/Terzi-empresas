@@ -116,7 +116,7 @@
 <?php wp_reset_postdata(); ?>
 </section>
 
-<section class="container">
+<section class="container" id="container-price">
   <div class="price">
     <h5><?php the_field('titulo-cotacao'); ?></h5>
         <div class="cambio" width="200px">

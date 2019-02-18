@@ -23,7 +23,7 @@
 
   <section class="slide" id="slide">
   <div class="button">
-    <a href="#menu" id="btn-open" ><i class="fas fa-align-right"></i></a>
+    <a href="#menu" class="btn-open" ><i class="fas fa-align-right"></i></a>
   </div>
   <div class="overlay-menu">
       <div class="nav-widgets">

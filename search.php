@@ -1,23 +1,28 @@
-<?php get_header(); ?>
-
- <!-- Container -->
-  <div class="container">
-
-    <div class="row-fluid">
-
-      <!-- Posts -->
-      <div class="col-sm-9 blog-main" itemscope itemtype="http://schema.org/Article">
-
-        <h2>Você buscou por: <?php echo esc_html(get_query_var('s')); ?></h2>
+<?php get_header('interno'); ?>
 
 
-      </div>
-      <!-- Posts -->
+<div class="container-blog">
+<h2 class="pesquisa">Você buscou por: <?php echo esc_html(get_query_var('s')); ?></h2>
+  
+  <?php while(have_posts()) : the_post(); ?> 
+    <div class="container-direction-blog">
+    
+  
+  <?php endwhile; ?>
+</div>  
 
-      <?php get_sidebar(); ?>
+  
+  
 
-    </div>
-  </div>
-  <!-- Fim Container -->
+</div>
+<?php get_sidebar(); ?> 
 
-<?php get_footer(); ?>
+  
+
+
+
+<?php 
+if (function_exists('wp_bootstrap_pagination') ) wp_bootstrap_pagination();
+?> 
+
+<?php get_footer() ?>

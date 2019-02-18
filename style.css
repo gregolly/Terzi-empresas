@@ -25,7 +25,7 @@ html{
   width: 150px !important;
 }
 .button {
-	display:inline;
+	display:none;
 	position:absolute;
 	right:50px;
 	top:6px;
@@ -236,6 +236,8 @@ a{
   flex: 1 1 33.3%;
   position: relative;
   align-self: baseline;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .summary-services  .img-summary-services{
   width: 250px;
@@ -382,6 +384,8 @@ a{
 }
 .count-wrap{
   flex: 1 1 25%;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .count-wrap > .num-count{
   font-family: 'Roboto', sans-serif;;
@@ -429,7 +433,8 @@ a{
 }
 .partners-agreement img{
   display: inline-block;
-  margin-right: 10px
+  margin-left: 10px;
+  margin-right: 10px  
 }
 .blog{
   display: flex;
@@ -652,14 +657,20 @@ a{
   flex:  1 1 calc(33.3% - 100px);
   align-self: center;
   text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .banner .container .logo-engineer{
   flex: 1 1 33.3%;
   align-self: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .banner .container .associated{
   flex: 1 1 33.3%;
   align-self: center;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .phrase, .logo-engineer, .associated{
   padding-right: 20px;
@@ -842,6 +853,7 @@ a{
   color: #fff;
   font-size: 22px;
   border-radius: 4px;
+  opacity: ;
 }
 .copy-dev{
   padding: 30px 0;
@@ -898,6 +910,12 @@ a{
   left: 0;
   top: 0;
 }
+.pesquisa{
+  padding: 20px;
+  text-transform: uppercase;
+  font-family: 'roboto', sans-serif;
+  font-weight: bold;
+}
 ::-webkit-scrollbar-track {
   background-color: #fff;
 }
@@ -926,11 +944,16 @@ a{
     font-size: 32px;
     text-align: center;
   }
+  .slide .nav-widgets{
+    display: block;
+    text-align: center;
+    line-height: 2;
+  }
   .slide .nav-widgets .navigation ul{
     display: block;
   }
   .overlay-menu{
-    position: fixed;
+    position: relative;
     top: 0;
     z-index: 99;
     display: none;
@@ -938,6 +961,9 @@ a{
     width: 100%;
     height: 100%;
     background: #333;
+  }
+  .button{
+    display: inline;
   }
 }
 
@@ -1020,6 +1046,9 @@ a{
     margin-top: 20px;
     margin-bottom: 20px;
   }
+  .blog{
+    max-width: 300px;
+  }
   .blog > .news{
     flex: 1 1 100%;
   }
@@ -1039,8 +1068,17 @@ a{
   .container > .price{
     flex: 1 1 100%;
   }
+  .container .price h5{
+    margin: 20px auto;
+  }
+  #container-price{
+    max-width: 100%;
+  }
   .container .price .links{
     flex: 1 1 100%;
+  }
+  .links h5{
+    margin: 55px auto;
   }
   .banner .container .phrase{
     flex: 1 1 100%;

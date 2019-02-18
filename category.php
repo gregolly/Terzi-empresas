@@ -1,23 +1,44 @@
-<?php get_header(); ?>
+<?php get_header('interno'); 
 
- <!-- Container -->
-  <div class="container">
+//Template name: Notícias
 
-    <div class="row-fluid">
-
-      <h1>Listagem da categoria <?php single_cat_title(); ?></h1>
-
-      <!-- Posts -->
-      <div class="col-sm-9 blog-main" itemscope itemtype="http://schema.org/Article">
-
-
-      </div>
-      <!-- Posts -->
-
-      <?php get_sidebar(); ?>
-
-    </div>
+?>
+<div class="container-blog">
+<h1>Listagem da categoria <?php single_cat_title(); ?></h1>
+  <div class="row">
+  <?php while(have_posts()) : the_post(); ?> 
+    <div class="container-direction-blog">
+      <article class="news-flex-interno">
+            <a href="<?php the_permalink(); ?>">
+           
+              <h4><?php the_title(); ?></h4>
+                <div class="news-wrap-interno -first-news">
+                  <?php the_post_thumbnail('blog-images'); ?>
+                  <div class="news-caption-interno">
+                  <?php echo the_excerpt(); ?>
+                    <div class="date"><?php the_time('d/m/y'); ?></div>
+                    <?php the_category(', '); ?>
+                  </div>
+                </div>
+                
+            </a>
+      </article>
   </div>
-  <!-- Fim Container -->
+  <?php endwhile; ?>
+</div>  
 
-<?php get_footer(); ?>
+  
+  
+
+</div>
+<?php get_sidebar(); ?> 
+
+  
+
+
+
+<?php 
+if (function_exists('wp_bootstrap_pagination') ) wp_bootstrap_pagination();
+?> 
+
+<?php get_footer() ?>

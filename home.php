@@ -4,7 +4,7 @@
 
 ?>
 <div class="container-blog">
-
+<h2>Você buscou por: <?php echo esc_html(get_query_var('s')); ?></h2>
   <div class="row">
   <?php while(have_posts()) : the_post(); ?> 
     <div class="container-direction-blog">
