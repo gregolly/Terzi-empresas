@@ -1,12 +1,14 @@
-<?php get_header('interno'); 
+<?php get_header('interno'); ?>
 
-//Template name: Notícias
 
-?>
+  
+
+
+
 <div class="container-blog">
-<h1>Listagem da categoria <?php single_cat_title(); ?></h1>
+
   <div class="row">
-  <?php while(have_posts()) : the_post(); ?> 
+  <?php if(have_posts()) : while(have_posts()) : the_post(); ?> 
     <div class="container-direction-blog">
       <article class="news-flex-interno">
             <a href="<?php the_permalink(); ?>">
@@ -24,7 +26,8 @@
             </a>
       </article>
   </div>
-  <?php endwhile; ?>
+  <?php endwhile; else: ?>
+  <?php endif; ?>
 </div>  
 
   

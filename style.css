@@ -36,24 +36,24 @@ html{
 .button a {
 	text-decoration:none;
 }
-.btn-open:after {
+.btn-open::after {
 	color:#fff;
 	content:"\f0c9";
   font-family:"FontAwesome";
   font-weight: 900;
 	transition-property:all .2s linear 0s;
 }
-.btn-open:hover:after {
+.btn-open:hover::after {
 	color:#34B484;
 }
-.btn-close:after {
+.btn-close::after {
 	color:#fff;
   content:"\f00d";
   font-weight: 900;
 	font-family:"FontAwesome";
 	transition-property:all .2s linear 0s;
 }
-.btn-close:hover:after {
+.btn-close:hover::after {
 	color: #34B484;
 }
 .rl-loading{
@@ -411,8 +411,6 @@ a{
   margin-bottom: 140px;
 }
 .agreement h2{
-  width: 191px;
-  height: 51px;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
   font-stretch: condensed;
@@ -435,6 +433,33 @@ a{
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px  
+}
+.register{
+  text-align: center;
+  margin: 40px 0;
+}
+.register-wrap p{
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  line-height: 0.94;
+  color: #000000;
+  text-transform: uppercase;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.register h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-stretch: condensed;
+  font-weight: bold;
+  line-height: 51px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #d92225;
+  display: inline-block;
+  padding: 0px 15px;
+  margin-bottom: 20px;
 }
 .blog{
   display: flex;
@@ -910,6 +935,9 @@ a{
   left: 0;
   top: 0;
 }
+#form{
+  z-index: 100;
+}
 .pesquisa{
   padding: 20px;
   text-transform: uppercase;
@@ -1209,6 +1237,7 @@ html{
   padding-left: 5px;
   padding-right: 5px;
   box-sizing: border-box;
+  margin-top: 110px;
 }
 .aside-container .unstyled-list{
   list-style: none;
@@ -1244,6 +1273,20 @@ html{
   font-size: 42px;
   line-height: 1.2;
   letter-spacing: 0px;
+  margin-bottom: 10px;
+}
+.aside-container .unstyled-list #recent-posts-3 li{
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #272532;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.aside-container .unstyled-list #recent-posts-3 li a{
+  color: #000;
 }
 .container-blog{
   /*width: 100%;
@@ -1257,7 +1300,7 @@ html{
   padding-right: 15px;
 }
 .container-direction-blog{
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .container-blog article{
   border-bottom: 1px solid #000;
@@ -1268,15 +1311,8 @@ html{
   margin-left: auto;
   margin-right: auto;
 }
-.row{
- /* display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;*/
-}
-.news-flex-interno .row h4{
+
+.news-flex-interno h4{
   font-weight: 400;
   font-style: normal;
   font-family: 'Roboto', sans-serif;
@@ -1287,7 +1323,7 @@ html{
   text-transform: uppercase;
   margin-bottom: 20px;
 }
-.news-flex-interno .row h4:hover{
+.news-flex-interno h4:hover{
  color: #b9de3e;
 }
 
@@ -1305,7 +1341,11 @@ html{
   line-height: 1.5;
   letter-spacing: 0px
 }
-
+.news-wrap-interno .news-caption-interno .cat-blog{
+  display: inline-block;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
 .post-nav{
   display: flex;
   max-width: 1200px;

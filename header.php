@@ -23,7 +23,7 @@
 
   <section class="slide" id="slide">
   <div class="button">
-    <a href="#menu" class="btn-open" ><i class="fas fa-align-right"></i></a>
+    <a href="#menu" class="btn-open" ></a>
   </div>
   <div class="overlay-menu">
       <div class="nav-widgets">
@@ -43,10 +43,7 @@
             <a href="<?php the_field('youtube', 31);?>" class="-icons"><i class="fab fa-youtube"></i></a>
             <a href="<?php the_field('linkedin', 31);?>" class="-icons"><i class="fab fa-linkedin"></i></a>
         </ul>
-        <form role="search" method="get" action="<?php bloginfo('home'); ?>">
-          <a href="#" class="search animated bounceInRight"><i class="fas fa-search"></i></a>
-          <input class="search-input" type="text" name="s" value="<?php echo get_search_query(); ?>" class="form-control" placeholder="Buscar...">
-        </form>
+        <?php get_search_form(); ?>
       </div>
     </div> 
       <div class="logo">

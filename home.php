@@ -4,9 +4,9 @@
 
 ?>
 <div class="container-blog">
-<h2>Você buscou por: <?php echo esc_html(get_query_var('s')); ?></h2>
+
   <div class="row">
-  <?php while(have_posts()) : the_post(); ?> 
+  <?php if(have_posts()) : while(have_posts()) : the_post(); ?> 
     <div class="container-direction-blog">
       <article class="news-flex-interno">
             <a href="<?php the_permalink(); ?>">
@@ -17,14 +17,15 @@
                   <div class="news-caption-interno">
                   <?php echo the_excerpt(); ?>
                     <div class="date"><?php the_time('d/m/y'); ?></div>
-                    <?php the_category(', '); ?>
+                    <span class="cat-blog"><?php the_category(', '); ?><span>
                   </div>
                 </div>
                 
             </a>
       </article>
   </div>
-  <?php endwhile; ?>
+  <?php endwhile; else: ?>
+  <?php endif; ?>
 </div>  
 
   

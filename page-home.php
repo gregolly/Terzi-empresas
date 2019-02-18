@@ -67,6 +67,15 @@
   </div>
 </section>
 
+<section class="register">
+  <h2><?php the_field('register_title'); ?></h2>
+  <div class="register-wrap container">
+    <?php if(have_rows('register-itens')) : while(have_rows('register-itens')) : the_row(); ?>
+      <p><?php the_sub_field('registers'); ?></p>
+    <?php endwhile; else: endif; ?>
+  </div>
+</section>
+
 
 <section class="blog" id="noticias">
   <div class="news">
@@ -129,10 +138,14 @@
   <div class="links">
   <h5><?php the_field('titulo-links'); ?></h5>
           <ul>
-            <?php if(have_rows('link-uteis-items')) : while(have_rows('link-uteis-items'))  the_row(); ?>
+            <?php if(have_rows('link-uteis-items')) : while(have_rows('link-uteis-items')) : the_row(); ?>
             <li><a href="<?php the_sub_field('path-link'); ?>"><?php the_sub_field('name-link'); ?></a></li>
-            <?php  else: endif; ?>
+            <?php endwhile; else: endif; ?>
           </ul>
+          <h5><?php the_field('titulo_recursos'); ?></h5>
+    <?php if(have_rows('recursos-img-item')) : while(have_rows('recursos-img-item')) :  the_row(); ?>
+      <img src="<?php the_sub_field('recursos-img'); ?>" alt="<?php the_sub_field('alt-recursos'); ?>">
+      <?php endwhile; else: endif; ?>     
   </div>
 </section>
 <section class="banner">
