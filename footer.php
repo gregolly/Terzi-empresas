@@ -10,7 +10,7 @@
 
       <div class="rodape-wrap rodape-wrap-adress">
         <p><i class="fas fa-map-marker-alt"></i><?php the_field('endereco-rodape', 31); ?></p>
-        <p><i class="fas fa-envelope"></i><?php the_field('email-rodape', 31); ?></p>
+        <p class="font-size"><i class="fas fa-envelope"></i><?php the_field('email-rodape', 31); ?></p>
       </div>
 
       <div class="rodape-wrap">
