@@ -13,7 +13,7 @@
            
               <h4><?php the_title(); ?></h4>
                 <div class="news-wrap-interno -first-news">
-                  <?php the_post_thumbnail('blog-images'); ?>
+                  <?php the_post_thumbnail('large'); ?>
                   <div class="news-caption-interno">
                   <?php echo the_excerpt(); ?>
                     <div class="date"><?php the_time('d/m/y'); ?></div>
