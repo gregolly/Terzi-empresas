@@ -150,5 +150,12 @@ function my_login_logo_url() {
 	function my_login_logo_url_title() {
 	return 'Nome do seu site - Voltar para Home';
 	}
-	add_filter( 'login_headertitle', 'my_login_logo_url_title' );	
+	add_filter( 'login_headertitle', 'my_login_logo_url_title' );
+	
+	//função favicon
+	function add_favicon() {
+		echo '<link rel="shortcut icon" type="image/png" href="'.get_template_directory_uri().'img/favicon.png" />';
+		}
+
+	add_action('wp_head', 'add_favicon');
 ?>
