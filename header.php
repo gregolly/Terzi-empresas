@@ -16,7 +16,7 @@
       <li><?php the_field('telefone-header-item', 31); ?></li>
       <li><?php the_field('endereco-header-item', 31); ?></li>
       <li><?php the_field('email-header-item', 31); ?></li>
-      <li><a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/wp-login.png" alt="login para o painel administrativo do site"></a></li>
+      <li><a href="http://www.terziempresas.com.br/wp-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/wp-login.png" alt="login para o painel administrativo do site"></a></li>
     <ul>
       
   </header>

@@ -24,10 +24,13 @@ html{
 #corpo{
   width: 150px !important;
 }
+.btn-menu{
+  display: none;
+}
 .button {
 	display:none;
 	position:absolute;
-	right:50px;
+	left:50px;
 	top:6px;
 	z-index:999;
   font-size:30px;
@@ -39,7 +42,7 @@ html{
 .btn-open::after {
 	color:#fff;
 	content:"\f0c9";
-  font-family:"FontAwesome";
+  font-family: 'Font Awesome\ 5 Free';
   font-weight: 900;
 	transition-property:all .2s linear 0s;
 }
@@ -50,7 +53,7 @@ html{
 	color:#fff;
   content:"\f00d";
   font-weight: 900;
-	font-family:"FontAwesome";
+	font-family: 'Font Awesome\ 5 Free';
 	transition-property:all .2s linear 0s;
 }
 .btn-close:hover::after {
@@ -866,6 +869,105 @@ a{
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
 }
+.rodape > .rodape-itens-interno{
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.rodape .rodape-itens-interno .rodape-wrap{
+  color: #fff;
+  flex: 1 1 15%;
+  margin-top: 100px;
+  align-self: center;
+  box-sizing: border-box;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+.rodape .rodape-itens-interno .rodape-wrap > .phones li:first-child{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: condensed;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+.rodape .rodape-itens-interno .rodape-wrap > .phones li{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: condensed;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+.rodape .rodape-itens-interno .rodape-wrap > .phones li span{
+  margin-left: 30px;
+  display: inline-block;
+}
+.rodape .rodape-itens-interno .rodape-wrap > .phones li i{
+  width: 40px;
+  height: 30px;
+  font-size: 30px;
+  vertical-align: top;
+}
+
+.rodape .rodape-itens-interno .rodape-wrap.rodape-wrap-adress{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: condensed;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+.rodape-wrap.rodape-wrap.rodape-wrap-adress p{
+  margin-bottom: 20px;
+}
+.rodape .rodape-itens-interno .rodape-wrap.rodape-wrap-adress p i{
+  width: 40px;
+  font-size: 25px;
+}
+.rodape-wrap .rodape-form form input{
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+.rodape-wrap .rodape-form form textarea{
+  width: 100%;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 20px 10px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #4b4b4b;
+}
+.rodape-wrap .rodape-form button{
+  width: 193px;
+  height: 52px;
+  background-color: #000000;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+}
 .font-size{
   font-size: 14px;
 }
@@ -925,8 +1027,8 @@ a{
   font-family: 'Roboto', sans-serif;
   padding-right: 20px;
 }
-.header .container.header-interno nav .action:hover{
-  color: #ccc ;
+.header .container.header-interno ul li{
+  display: inline-block;
 }
 .container.header-interno a{
   z-index: 1000;
@@ -997,6 +1099,35 @@ a{
   .button{
     display: inline;
   }
+  .header.-interno .container.header-interno{
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    vertical-align: middle;
+    flex-direction: column; 
+    position: relative;
+  }
+  .header.-interno .container.header-interno a{
+    margin-bottom: 20px;
+  }
+  .header.-interno .container.header-interno .logo-interno{
+    display: none;
+  }
+  .header.-interno .navigation{
+    padding: 20px;
+  } 
+  .header.-interno .container.header-interno ul{
+    margin-bottom: 20px;
+  }
+  .header.-interno .container.header-interno ul li{
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+  }
+  .header.-interno .container.header-interno form{
+    margin-bottom: 20px;
+  }
+  
 }
 
 @media (max-width:873px){
@@ -1393,7 +1524,15 @@ html{
 .mina{
   padding: 50px 0;
 }
-
+.mina img{
+  margin: 40px auto;
+}
+.mina p{
+    line-height: 1.5;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    color: #4d4d4d
+}
 body.login{
   background-color: #ccc;
 }

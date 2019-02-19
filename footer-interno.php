@@ -1,6 +1,6 @@
 <footer class="rodape" id="contato">
   
-    <div class="rodape-itens">
+    <div class="rodape-itens-interno">
       <div class="rodape-wrap">
         <ul class="phones">
           <li><i class="fas fa-phone"></i><?php the_field('phone-rodape', 31); ?></li>

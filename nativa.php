@@ -4,10 +4,10 @@
 
 <section class="container mina">
   <div class="wrap">
-    <img src="<?php the_field(''); ?>" alt="logo da mina azul"/>
-    <p><?php the_field(''); ?></p>
+    <img src="<?php the_field('img-nativa'); ?>" alt="logo da mina azul"/>
+    <p><?php the_field('texto-nativa'); ?></p>
   </div>
 </section>
 
 
-<?php get_footer(); ?>
+<?php get_footer('interno'); ?>

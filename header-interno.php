@@ -14,11 +14,13 @@
   <header class="header -interno">
     <div class="overlay"></div>
     <div class="container header-interno">
-        <a href="#"><img src="<?= get_template_directory_uri(); ?>/img/logo-rodape.png" alt=""></a>
+        <a href="#" class="logo-interno"><img src="<?= get_template_directory_uri(); ?>/img/logo-rodape.png" alt=""></a>
             <nav class="navigation animated bounceInLeft">
-                <a href="#" id="empresas" class="action -first">Home</a>
-                <a href="#" id="noticias" class="action">noticias</a>
-                <a href="#" id="contato" class="action">fale conosco</a>
+                <ul>
+                <li><a href="http://www.terziempresas.com.br"class="action -first">Home</a><li>
+                <li><a href="http://www.terziempresas.com.br" id="noticias" class="action">noticias</a></li>
+                <li><a href="http://www.terziempresas.com.br" id="contato" class="action">fale conosco</a></li>
+                </ul>
             </nav>
 
             <ul class="social-media animated bounceInRight">

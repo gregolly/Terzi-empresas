@@ -16,7 +16,7 @@
         <ul class="list-summary-services">
           <li><?php the_field('services-line'); ?></li>
         </ul>
-        <a href="#" class="button-summary-services-red"><?php the_field('services-button'); ?></a>
+        <a href="http://www.terziempresas.com.br/terzi-consultoria" class="button-summary-services-red"><?php the_field('services-button'); ?></a>
         <img src="<?php the_field('services-button-img'); ?>" alt="<?php the_field('services-button-img-alt'); ?>" class="cured">
       </div>
 
@@ -26,7 +26,7 @@
         <ul class="list-summary-services">
           <li><?php the_field('services-line-blue'); ?></li>
         </ul>
-        <a href="#" class="button-summary-services-blue"><?php the_field('services-button'); ?></a>
+        <a href="http://www.terziempresas.com.br/mina-azul" class="button-summary-services-blue"><?php the_field('services-button'); ?></a>
         <img src="<?php the_field('services-button-img-blue'); ?>" alt="<?php the_field('services-button-img-alt-blue'); ?>" class="cublue">
       </div>
 
@@ -37,7 +37,7 @@
         <ul class="list-summary-services">
           <li><?php the_field('services-line-green'); ?></li>
         </ul>
-        <a href="#" class="button-summary-services-green"><?php the_field('services-button'); ?></a>
+        <a href="http://www.terziempresas.com.br/nativa" class="button-summary-services-green"><?php the_field('services-button'); ?></a>
         <img src="<?php the_field('services-button-img-green'); ?>" alt="<?php the_field('services-button-img-alt-green'); ?>" class="cugreen">
       </div>
        
@@ -186,6 +186,18 @@ function initMap() {
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc4yTC-Cal6k6A5rFgYNXt6OwLNkKE-jM&callback=initMap"
     async defer></script>
+
+    
+      <?php 
+        if(isset($_GET['status'])):
+          if($_GET['status'] == 'sucesso'):
+            echo "<script>Materialize.toast('Enviado com sucesso!, 4000);</script>";
+            else:
+            echo "<script>Materialize.toast('Erro ao Enviar', 4000);</script>";
+            endif;
+          endif;  
+      ?>
+   
 </section>
 
 <?php get_footer(); ?>
