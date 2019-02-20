@@ -51,7 +51,7 @@
 <section class="container count">
 <?php if(have_rows('count-terzi')) : while (have_rows('count-terzi')) : the_row(); ?>
   <div class="count-wrap">
-    <li class="num-count"><span class="coun"><?php the_sub_field('count-number'); ?></span></li>
+    <div class="num-count"><span class="coun" id="count"><?php the_sub_field('count-number'); ?></span></div>
     <p class="text-count"><?php
     the_sub_field('count-name'); ?></p>
   </div>

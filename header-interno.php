@@ -13,9 +13,11 @@
 </head>
 <body>
   <header class="header -interno">
-    <div class="overlay"></div>
+  <div class="button-interno">
+    <a href="#menu" class="btn-close" ></a>
+  </div>
+  <div class="overlay-interno">
     <div class="container header-interno">
-        <a href="http://www.terziempresas.com.br" class="logo-interno"><img src="<?= get_template_directory_uri(); ?>/img/logo-rodape.png" alt=""></a>
             <nav class="navigation animated bounceInLeft">
                 <ul>
                 <li><a href="http://www.terziempresas.com.br"class="action -first">Home</a><li>
@@ -32,5 +34,6 @@
             </ul>
             <?php get_search_form(); ?>
     </div> 
+  </div>  
   </header>
 
