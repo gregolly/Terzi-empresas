@@ -1,4 +1,4 @@
-<footer class="rodape" id="contato">
+﻿<footer class="rodape" id="contato">
   
     <div class="rodape-itens-interno">
       <div class="rodape-wrap">
@@ -37,7 +37,7 @@
     <div class="justify">
       <p>&#169; Todos os direitos reservados à Terzi Empresas <?php echo date('Y'); ?></p>
       
-      <a href="#">
+      <a href="https://www.instagram.com/lrmarketingdigital/">
         <img src="<?= get_template_directory_uri(); ?>/img/lr-branca.png" alt="">     
       </a>
     </div>
