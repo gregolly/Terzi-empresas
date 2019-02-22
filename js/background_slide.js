@@ -1,9 +1,6 @@
 $(document).ready(function(){
   var imgArr = new Array(
-    'img/slide1.jpg',
-    'img/slide2.jpg',
-    'img/slide3.jpg',
-    'img/slide4.jpg'
+    "http://http://terzi-empresas.local/tersi-1/img/slide1.jpg"
   )
 
   var preloadArr = new Array();

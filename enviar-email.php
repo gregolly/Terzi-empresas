@@ -1,33 +1,22 @@
-<?php
-// Recebendo dados do formulário
-$name = $_POST['name'];
-//$email = $_POST['email'];
-$phone = $_POST['telefone'];
-$message = $_POST['mensagem'];
-//$subject = "Mensagem do Site";
-
-$headers = "Content-Type: text/html; charset=utf-8\r\n";
-$headers .= "From: $email\r\n";
-$headers .= "Reply-To: $email\r\n";
-
-// Dados que serão enviados
-$corpo = "Formulário da página de contato <br>";
-$corpo .= "Nome: " . $name . " <br>";
-$corpo .= "Telefone: " . $phone . " <br>";
-$corpo .= "Email: " . $email . " <br>";
-$corpo .= "Mensagem: " . $message . " <br>";
-
-// Email que receberá a mensagem (Não se esqueça de substituir)
-$email_to = 'email';
-
-// Enviando email
-$status = mail($email_to, mb_encode_mimeheader($subject, "utf-8"), $corpo, $headers);
-
-if ($status):
-  // Enviada com sucesso
-  header('location:index.php?status=sucesso');
-else:
-  // Se der erro
-  header('location:index.php?status=erro');
-endif;
-?>
+﻿<?php
+  //1 – Definimos Para quem vai ser enviado o email
+  $para = "seu-email@dominio.com.br";
+  //2 - resgatar o nome digitado no formulário e  grava na variavel $nome
+  $nome = $_POST['nome'];
+  // 3 - resgatar o assunto digitado no formulário e  grava na variavel //$assunto
+  $telefone = $_POST['telefone'];
+   //4 – Agora definimos a  mensagem que vai ser enviado no e-mail
+  $mensagem = "<strong>Nome:  </strong>".$nome;
+  $mensagem .= "<br>  <strong>Mensagem: </strong>".$_POST['mensagem'];
+ 
+//5 – agora inserimos as codificações corretas e  tudo mais.
+  $headers =  "Content-Type:text/html; charset=UTF-8\n";
+  $headers .= "From:  www.terziempresas.com.br<www.terziempresas.com.br>\n"; //Vai ser //mostrado que  o email partiu deste email e seguido do nome
+  $headers .= "X-Sender:  <www.terziempresas.com.br>\n"; //email do servidor //que enviou
+  $headers .= "X-Mailer: PHP  v".phpversion()."\n";
+  $headers .= "X-IP:  ".$_SERVER['REMOTE_ADDR']."\n";
+  $headers .= "Return-Path:  <www.terziempresas.com.br>\n"; //caso a msg //seja respondida vai para  este email.
+  $headers .= "MIME-Version: 1.0\n";
+ 
+mail($para, $assunto, $mensagem, $headers);  //função que faz o envio do email.
+  ?>

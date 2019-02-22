@@ -28,7 +28,7 @@ html{
 .btn-menu{
   display: none;
 }
-.button {
+.button-menu {
 	display:none;
 	position:absolute;
 	left:50px;
@@ -55,7 +55,7 @@ html{
   height: 100%;
   background: #333;
 }
-.button a {
+.button-menu a {
 	text-decoration:none;
 }
 .btn-open::after {
@@ -1084,7 +1084,7 @@ a{
   .overlay-iterno{
     display: none !important;
   }
-  .button{
+  .button-menu{
     display: inline;
   }
   .button-interno{

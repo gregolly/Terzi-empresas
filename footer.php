@@ -15,11 +15,11 @@
 
       <div class="rodape-wrap">
         <div class="rodape-form">
-          <form action="<?= get_template_directory_uri(); ?>/enviar-email.php" method="post">
+        <form action="<?= get_template_directory_uri(); ?>/enviar-email.php" id="form1" method="post">
             <input type="text" name="name" id="name" placeholder="Nome">
             <input type="text" name="telefone" id="telefone" placeholder="(65) 99999-9999">
             <textarea type="text" name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
-            <button><?php the_field('button-form', 31); ?></button>
+            <button type="submit" form="form1"><?php the_field('button-form', 31); ?></button>
           </form>
         </div>
       </div>

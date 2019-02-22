@@ -23,7 +23,7 @@
   </header>
 
   <section class="slide" id="slide">
-  <div class="button">
+  <div class="button-menu">
     <a href="#menu" class="btn-open" ></a>
   </div>
   <div class="overlay-menu">
