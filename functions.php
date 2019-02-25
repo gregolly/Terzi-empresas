@@ -51,8 +51,8 @@ add_action('wp_enqueue_scripts', 'terzi_add_script_rodape');
 
 function terzi_add_script_rodape(){
   wp_enqueue_script('jquery-plugin', get_stylesheet_directory_uri() . '/js/jquery.js');
-  wp_enqueue_script('background_slide', get_stylesheet_directory_uri() . '/js/background_slide.js');
 	wp_enqueue_script('search-form', get_stylesheet_directory_uri() . '/js/search.js');
+	wp_enqueue_script('form-mailer', get_stylesheet_directory_uri() . '/js/form.js');
 	wp_enqueue_script('menu-overlay', get_stylesheet_directory_uri() . '/js/menu-responsive.js');
 	wp_enqueue_script('menu-responsivo-interno', get_stylesheet_directory_uri() . '/js/menu-responsivo-interno.js');
 	wp_enqueue_script('contador', get_stylesheet_directory_uri() . '/js/count.js');
