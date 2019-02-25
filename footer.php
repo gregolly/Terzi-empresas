@@ -17,9 +17,10 @@
         <div class="rodape-form">
         <form action="<?= get_template_directory_uri(); ?>/enviar-email.php" id="form1" method="post">
             <input type="text" name="name" id="name" placeholder="Nome">
-            <input type="text" name="telefone" id="telefone" placeholder="(65) 99999-9999">
+            <input type="text" name="email" id="email" placeholder="seu e-mail" required>
+            <input type="text" name="telefone" id="telefone" placeholder="(65) 99999-9999" required>
             <textarea type="text" name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
-            <button type="submit" form="form1"><?php the_field('button-form', 31); ?></button>
+            <button type="submit" form="form1" value="Enviar"><?php the_field('button-form', 31); ?></button>
           </form>
         </div>
       </div>

@@ -1,48 +1,27 @@
 ﻿<?php
-
-// Trocar os valores abaixo
-
-$emailenvio = 'claudio@terziempresas.com.br';
-$assunto = 'Formulario terzi empresas';
-$url = 'http://www.terziempresas.com.br';
-
-// Mude até aqui apenas
-
-$nome = $_POST['nome'];
-$telefone = $_POST['telefone'];
-$mensagem = $_POST['mensagem'];
-
-$body = "$mensagem\n\n---------------\n\n$nome\n$telefone";
-
-if ($_POST['leaveblank'] != '' or $_POST['dontchange'] != 'http://') {
-
-  echo "Não foi possível enviar o e-mail. Tente novamente ou entre em contato com " . $emailenvio;
-  echo "<meta HTTP-EQUIV='Refresh' CONTENT='10;URL=" . $url . "'>";
-
-} else if (isset($_POST['email'])) {
-
-require ('./PHPMailer/PHPMailerAutoload.php');
-
-$mail = new PHPMailer;
-$mail->CharSet = 'UTF-8';
-$mail->WordWrap = 70;
-$mail->addAddress($emailenvio);
-
-$mail->From = $email;
-$mail->FromName = $nome;
-$mail->AddReplyTo($email, $nome);
-$mail->Subject = $assunto;
-
-$mail->Body = $body;
-
-if(!$mail->send()) {
-  echo "Não foi possível enviar o e-mail. Tente novamente ou entre em contato com " . $emailenvio;
-  echo "<meta HTTP-EQUIV='Refresh' CONTENT='10;URL=" . $url . "'>";
-} else {
-  echo "E-mail enviado com sucesso!";
-  echo "<meta HTTP-EQUIV='Refresh' CONTENT='2;URL=" . $url . "'>";
-}
-
-}
-
+  //1 – Definimos Para quem vai ser enviado o email
+  $para = "claudido@terziempresas.com.br;"
+  //2 - resgatar o nome digitado no formulário e  grava na variavel $nome
+  $nome = $_POST['nome'];
+  //3 - regsgatar o email digitado no formulário e grana na variavel $email
+  $email = $_POST['email'];
+  //3 - regsgatar o email digitado no formulário e grana na variavel $email
+  $telefone = $_POST['telefone'];
+  // 3 - resgatar o assunto digitado no formulário e  grava na variavel //$assunto
+  //$assunto = $_POST['mensagem'];
+   //4 – Agora definimos a  mensagem que vai ser enviado no e-mail
+  $mensagem = "<strong>Nome:  </strong>".$nome;
+  $mensagem .= "<br>  <strong>Mensagem: </strong>".$_POST['mensagem'];
+ 
+//5 – agora inserimos as codificações corretas e  tudo mais.
+  $headers =  "Content-Type:text/html; charset=UTF-8\n";
+  $headers .= "From:  dominio.com.br<sistema@dominio.com.br>\n"; //Vai ser //mostrado que  o email partiu deste email e seguido do nome
+  $headers .= "X-Sender:  <sistema@dominio.com.br>\n"; //email do servidor //que enviou
+  $headers .= "X-Mailer: PHP  v".phpversion()."\n";
+  $headers .= "X-IP:  ".$_SERVER['REMOTE_ADDR']."\n";
+  $headers .= "Return-Path:  <sistema@dominio.com.br>\n"; //caso a msg //seja respondida vai para  este email.
+  $headers .= "MIME-Version: 1.0\n";
+ 
+mail($para, $nome, $email, $telefone, $mensagem, $headers);  //função que faz o envio do email.
+  ?>
 ?>

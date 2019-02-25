@@ -186,18 +186,6 @@ function initMap() {
   </script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBc4yTC-Cal6k6A5rFgYNXt6OwLNkKE-jM&callback=initMap"
     async defer></script>
-
-    
-      <?php 
-        if(isset($_GET['status'])):
-          if($_GET['status'] == 'sucesso'):
-            echo "<script>Materialize.toast('Enviado com sucesso!, 4000);</script>";
-            else:
-            echo "<script>Materialize.toast('Erro ao Enviar', 4000);</script>";
-            endif;
-          endif;  
-      ?>
-   
 </section>
 
 <?php get_footer(); ?>
