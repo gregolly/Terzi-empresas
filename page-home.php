@@ -108,7 +108,7 @@
   <h3><?php the_field('titulo_eventos'); ?></h3>
   <?php $Eventos = new WP_Query([
             'posts_per_page' => 6,
-            'post_type' => 'eventos'
+            'post_type' => 'eventos',
         ]); 
           
         while($Eventos->have_posts()) : $Eventos->the_post();
@@ -123,7 +123,7 @@
     <?php endwhile; ?>
   
 </div><!-- fim do container -->    
-<?php wp_reset_postdata(); ?>
+<?php wp_reset_query(); ?>
 </section>
 
 <section class="container" id="container-price">
@@ -145,7 +145,7 @@
           </ul>
           <h5><?php the_field('titulo_recursos'); ?></h5>
     <?php if(have_rows('recursos-img-item')) : while(have_rows('recursos-img-item')) :  the_row(); ?>
-      <img src="<?php the_sub_field('recursos-img'); ?>" alt="<?php the_sub_field('alt-recursos'); ?>">
+      <img class="img-recursos" src="<?php the_sub_field('recursos-img'); ?>" alt="<?php the_sub_field('alt-recursos'); ?>">
       <?php endwhile; else: endif; ?>     
   </div>
 </section>

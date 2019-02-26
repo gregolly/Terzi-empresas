@@ -1,27 +1,34 @@
 ﻿<?php
-  //1 – Definimos Para quem vai ser enviado o email
-  $para = "claudido@terziempresas.com.br;"
-  //2 - resgatar o nome digitado no formulário e  grava na variavel $nome
-  $nome = $_POST['nome'];
-  //3 - regsgatar o email digitado no formulário e grana na variavel $email
-  $email = $_POST['email'];
-  //3 - regsgatar o email digitado no formulário e grana na variavel $email
-  $telefone = $_POST['telefone'];
-  // 3 - resgatar o assunto digitado no formulário e  grava na variavel //$assunto
-  //$assunto = $_POST['mensagem'];
-   //4 – Agora definimos a  mensagem que vai ser enviado no e-mail
-  $mensagem = "<strong>Nome:  </strong>".$nome;
-  $mensagem .= "<br>  <strong>Mensagem: </strong>".$_POST['mensagem'];
- 
-//5 – agora inserimos as codificações corretas e  tudo mais.
-  $headers =  "Content-Type:text/html; charset=UTF-8\n";
-  $headers .= "From:  dominio.com.br<sistema@dominio.com.br>\n"; //Vai ser //mostrado que  o email partiu deste email e seguido do nome
-  $headers .= "X-Sender:  <sistema@dominio.com.br>\n"; //email do servidor //que enviou
-  $headers .= "X-Mailer: PHP  v".phpversion()."\n";
-  $headers .= "X-IP:  ".$_SERVER['REMOTE_ADDR']."\n";
-  $headers .= "Return-Path:  <sistema@dominio.com.br>\n"; //caso a msg //seja respondida vai para  este email.
-  $headers .= "MIME-Version: 1.0\n";
- 
-mail($para, $nome, $email, $telefone, $mensagem, $headers);  //função que faz o envio do email.
-  ?>
+// Recebendo dados do formulário
+$name = $_POST['name'];
+$email = $_POST['email'];
+$phone = $_POST['telefone'];
+$message = $_POST['mensagem'];
+$subject = "Mensagem do Site";
+
+$headers = "Content-Type: text/html; charset=utf-8\r\n";
+$headers .= "From: $email\r\n";
+$headers .= "Reply-To: $email\r\n";
+
+// Dados que serão enviados
+$corpo = "Formulário da página de contato <br>";
+$corpo .= "Nome: " . $name . " <br>";
+$corpo .= "Telefone: " . $phone . " <br>";
+$corpo .= "Email: " . $email . " <br>";
+$corpo .= "Mensagem: " . $message . " <br>";
+
+// Email que receberá a mensagem (Não se esqueça de substituir)
+$email_to = 'claudio@terziempresas.com.br';
+
+// Enviando email
+$status = mail($email_to, mb_encode_mimeheader($subject, "utf-8"), $corpo, $headers);
+
+if ($status):
+  // Enviada com sucesso
+  wp_redirect("/page-home.php?status=sucesso")('location:page-home?status=sucesso');
+else:
+  // Se der erro
+  wp_redirect("/page-home.php?status=sucesso")('location:page-home?status=erro');
+endif;
+
 ?>

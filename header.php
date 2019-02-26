@@ -30,8 +30,8 @@
       <div class="nav-widgets">
         <nav class="navigation animated bounceInLeft">
           <ul>
-            <li><a href="#empresas" class="action -first">as empresas</a></li>
-            <li><a href="#servicos" class="action">serviços</a></li>
+            <li class="-modificador"><a href="#empresas" class="action -first">as empresas</a></li>
+            <li><a href="/servicos" class="action">serviços</a></li>
             <li><a href="#convenios" class="action">convênios</a></li>
             <li><a href="#noticias" class="action">noticias</a></li>
             <li><a href="#contato" class="action">fale conosco</a></li>
@@ -39,8 +39,6 @@
              
         </nav>
         <ul class="social-media animated bounceInRight">
-            <a href="<?php the_field('facebook', 31);?>" class="-icons"><i class="fab fa-facebook-f"></i></a>
-            <a href="<?php the_field('instagram', 31);?>" class="-icons"><i class="fab fa-instagram"></i></a>
             <a href="<?php the_field('youtube', 31);?>" class="-icons"><i class="fab fa-youtube"></i></a>
             <a href="<?php the_field('linkedin', 31);?>" class="-icons"><i class="fab fa-linkedin"></i></a>
         </ul>

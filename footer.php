@@ -3,8 +3,8 @@
     <div class="rodape-itens">
       <div class="rodape-wrap">
         <ul class="phones">
-          <li><i class="fas fa-phone"></i><?php the_field('phone-rodape', 31); ?></li>
-          <li><i class="far fa-clock"></i><?php the_field('horario-rodape', 31); ?></li>
+          <li><i class="fas fa-phone float-i"></i><?php the_field('phone-rodape', 31); ?></li>
+          <li><i class="far fa-clock float-i"></i><?php the_field('horario-rodape', 31); ?></li>
         </ul>
       </div>
 
@@ -30,7 +30,23 @@
         </div>
     </div>
 
-</div>  
+</div>
+    <div class="sociais-terzi">
+            <div class="sociais-terzi-wrap">
+              <p>Terzi consultoria</p>
+              <a href="<?php the_field('instagram-terzi'); ?>"><i class="fab fa-instagram"></i></a><a href="<?php the_field('facebook-terzi'); ?>"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div class="sociais-terzi-wrap">
+              <p>Viveiro mina azul</p>
+              <a href="<?php the_field('instagram-mina'); ?>"><i class="fab fa-instagram"></i></a><a href="<?php the_field('facebook-mina'); ?>"><i class="fab fa-facebook-f"></i></a>
+            </div>
+
+            <div class="sociais-terzi-wrap">
+              <p>Nativa reflorestamento</p>
+              <a href="<?php the_field('instagram-nativa'); ?>"><i class="fab fa-instagram"></i></a><a href="<?php the_field('facebook-nativa'); ?>"><i class="fab fa-facebook-f"></i></a>
+          </div>
+    </div>  
 </footer>
 
 <div class="copy-dev">
