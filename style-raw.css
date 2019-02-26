@@ -419,14 +419,14 @@ a{
   padding: 20px 0;
 }
 .count-wrap{
-  flex: 1 1 25%;
+  flex: 1 1 200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 20px;
 }
 .count-wrap > .num-count{
   font-family: 'Roboto', sans-serif;;
-  font-size: 80px;
+  font-size: 74px;
   font-weight: bold;
   font-style: italic;
   line-height: 0.54;
@@ -436,12 +436,11 @@ a{
 }
 .count-wrap .text-count{
   font-family: 'Roboto', sans-serif;
-  font-size: 34.5px;
+  font-size: 16px;
   font-weight: normal;
   font-style: italic;
-  line-height: 0.94;
+  line-height: 1.4;
   color: #000000;
-  text-transform: uppercase;
 }
 .agreement{
   text-align: center;
