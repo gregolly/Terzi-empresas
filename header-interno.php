@@ -20,15 +20,13 @@
     <div class="container header-interno">
             <nav class="navigation animated bounceInLeft">
                 <ul>
-                <li><a href="http://www.terziempresas.com.br"class="action -first">Home</a><li>
+                <li><a href="http://www.terziempresas.com.br" class="action -first">Home</a><li>
                 <li><a href="http://www.terziempresas.com.br" id="noticias" class="action">noticias</a></li>
                 <li><a href="http://www.terziempresas.com.br" id="contato" class="action">fale conosco</a></li>
                 </ul>
             </nav>
 
             <ul class="social-media animated bounceInRight">
-                <a href="<?php the_field('facebook', 31);?>" class="-icons"><i class="fab fa-facebook-f"></i></a>
-                <a href="<?php the_field('instagram', 31);?>" class="-icons"><i class="fab fa-instagram"></i></a>
                 <a href="<?php the_field('youtube', 31);?>" class="-icons"><i class="fab fa-youtube"></i></a>
                 <a href="<?php the_field('linkedin', 31);?>" class="-icons"><i class="fab fa-linkedin"></i></a>
             </ul>

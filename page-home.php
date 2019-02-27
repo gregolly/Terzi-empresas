@@ -3,9 +3,16 @@
 ?>
 
 <section class="services services-container" id="servicos">
+  <div>
     <p class="services-text"><?php the_field('texto-services'); ?></p>
-   
+    <p class="services-text"><?php the_field('texto-services1'); ?></p>
+    <p class="services-text"><?php the_field('texto-services2'); ?></p>
+    <p class="services-text"><?php the_field('texto-services3'); ?></p>
+    <p class="services-text"><?php the_field('texto-services4'); ?></p>
+  </div>
+  <div>
       <img src="<?php the_field('image-services'); ?>" alt="<?php the_field('image-services-alt'); ?>" class="logo-services animated flipInX"/>
+  </div>    
   </section>
 
 <section class="container" id="empresas">

@@ -14,15 +14,22 @@
       </div>
 
       <div class="rodape-wrap">
-        <div class="rodape-form">
-          <form action="<?= get_template_directory_uri(); ?>/enviar-email.php" id="form1" method="post">
-            <input type="text" name="name" id="name" placeholder="Nome">
-            <input type="text" name="email" id="email" placeholder="seu e-mail" required>
-            <input type="text" name="telefone" id="telefone" placeholder="(65) 99999-9999" required>
-            <textarea type="text" name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
-            <button type="submit" form="form1"><?php the_field('button-form', 31); ?></button>
-          </form>
-        </div>
+          <div class="sociais-terzi">
+                <div class="sociais-terzi-wrap">
+                  <p>Terzi consultoria</p>
+                  <a href="<?php the_field('instagram-terzi'); ?>"><i class="fab fa-instagram"></i></a><a href="<?php the_field('facebook-terzi'); ?>"><i class="fab fa-facebook-f"></i></a>
+                </div>
+
+                <div class="sociais-terzi-wrap">
+                  <p>Viveiro mina azul</p>
+                  <a href="<?php the_field('instagram-mina'); ?>"><i class="fab fa-instagram"></i></a><a href="<?php the_field('facebook-mina'); ?>"><i class="fab fa-facebook-f"></i></a>
+                </div>
+
+                <div class="sociais-terzi-wrap">
+                  <p>Nativa reflorestamento</p>
+                  <a href="<?php the_field('instagram-nativa'); ?>"><i class="fab fa-instagram"></i></a><a href="<?php the_field('facebook-nativa'); ?>"><i class="fab fa-facebook-f"></i></a>
+              </div>
+          </div>
       </div>
 
         <div class="rodape-wrap">
@@ -30,7 +37,16 @@
         </div>
     </div>
 
-</div>  
+</div>
+        <div class="rodape-form">
+          <form action="<?= get_template_directory_uri(); ?>/enviar-email.php" id="form1" method="post">
+            <input type="text" name="name" id="name" placeholder="Nome">
+            <input type="text" name="email" id="email" placeholder="seu e-mail" required>
+            <input type="text" name="telefone" id="telefone" placeholder="(65) 99999-9999" required>
+            <textarea type="text" name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+            <button type="submit" form="form1" value="Enviar"><?php the_field('button-form', 31); ?></button>
+          </form>
+        </div>  
 </footer>
 
 <div class="copy-dev">

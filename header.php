@@ -14,9 +14,9 @@
 <body>
   <header class="header">
     <ul class="container adress">
-      <li><?php the_field('telefone-header-item', 31); ?></li>
-      <li><?php the_field('endereco-header-item', 31); ?></li>
-      <li><?php the_field('email-header-item', 31); ?></li>
+      <li><i class="fas fa-phone"></i><?php the_field('telefone-header-item', 31); ?></li>
+      <li><i class="fas fa-map-marker-alt"></i><?php the_field('endereco-header-item', 31); ?></li>
+      <li><i class="far fa-envelope"></i><?php the_field('email-header-item', 31); ?></li>
       <li><a href="http://www.terziempresas.com.br/wp-admin"><img src="<?php echo get_template_directory_uri(); ?>/img/wp-login.png" alt="login para o painel administrativo do site"></a></li>
     <ul>
       
@@ -51,7 +51,7 @@
             <h1><img src="<?php the_field('logo-terzi', 31); ?>" alt="<?php the_field('logo-terzi-alt', 31); ?>" class="logo-slide animated bounceInLeft">
               </h1>
             </div>
-            <p class="animated bounceInRight">agronomia, consultoria, planejamento e responsabilidade</p>
+            <p class="animated bounceInRight"><?php the_field('texto-logo-slide'); ?></p>
          
         </div>
          
