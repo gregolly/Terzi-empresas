@@ -657,6 +657,7 @@ a{
 .container > .price{
   flex: 1 1 50%;
   padding: 50px;
+  margin-top: 40px;
   box-sizing: border-box
 }
 .container .price h5{
@@ -1300,6 +1301,13 @@ a{
   }
   .links h5{
     margin: 55px auto;
+  }
+  .container .links ul{
+    text-align: center;
+  }
+  .container .links .img-recursos{
+    display: block;
+    margin: 0 auto;
   }
   .banner .container .phrase{
     flex: 1 1 100%;
