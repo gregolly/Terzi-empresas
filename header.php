@@ -34,7 +34,7 @@
             <li><a href="/servicos" class="action">serviços</a></li>
             <li><a href="#convenios" class="action">convênios</a></li>
             <li><a href="#noticias" class="action">noticias</a></li>
-            <li><a href="#contato" class="action">fale conosco</a></li>
+            <li><a href="http:\\www.terziempresas.com.br/contato" class="action">fale conosco</a></li>
           </ul>
              
         </nav>
@@ -51,9 +51,9 @@
             <h1><img src="<?php the_field('logo-terzi', 31); ?>" alt="<?php the_field('logo-terzi-alt', 31); ?>" class="logo-slide animated bounceInLeft">
               </h1>
             </div>
-            <p class="animated bounceInRight"><?php the_field('texto-logo-slide'); ?></p>
+            <p class="animated bounceInRight text-p"><?php the_field('texto-logo-slide'); ?></p>
          
         </div>
          
-  </section>
+</section>
 

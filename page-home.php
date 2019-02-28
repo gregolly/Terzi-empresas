@@ -85,7 +85,7 @@
 </section>
 
 
-<section class="blog" id="noticias">
+<section class="blog" id="noticias" href="#noticias">
   <div class="news">
     <h3><?php the_field('titulo_news'); ?></h3>
     <?php
@@ -118,7 +118,7 @@
             'post_type' => 'eventos',
         ]); 
           
-        while($Eventos->have_posts()) : $Eventos->the_post();
+       if(have_posts()) : while($Eventos->have_posts()) : $Eventos->the_post();
         ?>
     <a href="<?php the_permalink(); ?>">
       <div class="events-posts"> 
@@ -127,7 +127,7 @@
             <div class="date"><?php the_time('d/m/y'); ?></div>
       </div>
     </a> 
-    <?php endwhile; ?>
+  <?php endwhile; else: endif; ?>
   
 </div><!-- fim do container -->    
 <?php wp_reset_query(); ?>

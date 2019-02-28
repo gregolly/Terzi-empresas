@@ -56,6 +56,7 @@ function terzi_add_script_rodape(){
 	wp_enqueue_script('menu-overlay', get_stylesheet_directory_uri() . '/js/menu-responsive.js');
 	wp_enqueue_script('menu-responsivo-interno', get_stylesheet_directory_uri() . '/js/menu-responsivo-interno.js');
 	wp_enqueue_script('contador', get_stylesheet_directory_uri() . '/js/count.js');
+	wp_enqueue_script('writer', get_stylesheet_directory_uri() . 'js/writer-machine.js');
   wp_deregister_script('jquery');
 }
 

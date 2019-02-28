@@ -14,4 +14,4 @@
 
 <?php endwhile; else: endif; ?>
 
-<?php get_footer('interno'); ?>
+<?php get_footer(); ?>

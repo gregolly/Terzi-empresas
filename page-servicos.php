@@ -29,19 +29,4 @@
     </div>  
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php get_footer('interno'); ?>
+<?php get_footer(); ?>
