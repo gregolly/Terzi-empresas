@@ -60,7 +60,7 @@ function terzi_add_script_rodape(){
 	wp_enqueue_script('writer', get_stylesheet_directory_uri() . '/js/writer-machine.js');
 	wp_enqueue_script('load-bar', get_stylesheet_directory_uri() . '/js/writer-machine.js');
 	wp_enqueue_script('lightbox', get_stylesheet_directory_uri() . '/js/lightbox.js');
-  wp_deregister_script('jquery');
+  //wp_deregister_script('jquery');
 }
 
 //registrar menu

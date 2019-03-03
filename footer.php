@@ -55,5 +55,6 @@
 </div>
 <a href="#" class="gotopbtn"><i class="fas fa-arrow-up"></i></a>
   <?php wp_footer(); ?>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
 </html>

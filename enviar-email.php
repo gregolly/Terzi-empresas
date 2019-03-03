@@ -1,34 +1,48 @@
 ﻿<?php
-// Recebendo dados do formulário
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['telefone'];
-$message = $_POST['mensagem'];
-$subject = "Mensagem do Site";
+// Import PHPMailer classes into the global namespace
+// These must be at the top of your script, not inside a function
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-$headers = "Content-Type: text/html; charset=utf-8\r\n";
-$headers .= "From: $email\r\n";
-$headers .= "Reply-To: $email\r\n";
+//Load Composer's autoloader
+require 'vendor/autoload.php';
 
-// Dados que serão enviados
-$corpo = "Formulário da página de contato <br>";
-$corpo .= "Nome: " . $name . " <br>";
-$corpo .= "Telefone: " . $phone . " <br>";
-$corpo .= "Email: " . $email . " <br>";
-$corpo .= "Mensagem: " . $message . " <br>";
+$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+try {
+    //Server settings
+    $mail->SMTPDebug = 1;                                 // Enable verbose debug output
+    $mail->isSMTP();                                      // Set mailer to use SMTP
+    $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
+    $mail->SMTPAuth = true;                               // Enable SMTP authentication
+    $mail->Username = 'user@example.com';                 // SMTP username
+    $mail->Password = 'secret';                           // SMTP password
+    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+    $mail->Port = 465;                                    // TCP port to connect to
 
-// Email que receberá a mensagem (Não se esqueça de substituir)
-$email_to = 'claudio@terziempresas.com.br';
+    //Recipients
+    $mail->setFrom('clauido@terziempresas.com.br', 'Mailer');
+    $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 
-// Enviando email
-$status = mail($email_to, mb_encode_mimeheader($subject, "utf-8"), $corpo, $headers);
+    //Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Here is the subject';
+    $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-if ($status):
-  // Enviada com sucesso
-  wp_redirect("/page-home.php?status=sucesso")('location:page-home?status=sucesso');
-else:
-  // Se der erro
-  wp_redirect("/page-home.php?status=sucesso")('location:page-home?status=erro');
-endif;
+    $mail->send();
+    echo 'Message has been sent';
+} catch (Exception $e) {
+    echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+}
 
-?>
+/*
+ //Server settings
+ $mail->SMTPDebug = false;                                 // Enable verbose debug output
+ $mail->isSMTP();                                      // Set mailer to use SMTP
+ $mail->Host = 'smtp.zoho.com';  // Specify main and backup SMTP servers
+ $mail->SMTPAuth = true;                               // Enable SMTP authentication
+ $mail->Username = 'publico@ferreiralab.com';                 // SMTP username
+ $mail->Password = 'senhaaqui';                           // SMTP password
+ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+ $mail->Port = 587;                                    // TCP port to connect to
+ */

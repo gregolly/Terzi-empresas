@@ -565,6 +565,7 @@ a{
   border-bottom-left-radius: 50px;
   border-top-right-radius: 50px;
   max-width: none;
+  width: 156px;
 }
 .blog .news .news-wrap h4{
   font-family: 'Roboto', sans-serif;
@@ -662,6 +663,7 @@ a{
 .container-events .events-posts img{
   border-bottom-left-radius: 50px;
   border-top-right-radius: 50px;
+  width: 156px;
 }
 .container-events .events-posts .date{
   font-family: 'Roboto', sans-serif;
@@ -1398,21 +1400,27 @@ a{
     padding: 0px;
     margin-top: 60px;
   }
+  .blog>.news h3{
+    margin: 0 auto;
+  }
   .blog .news .news-wrap{
     flex-wrap: wrap;
   }
   .blog .news .news-wrap .news-caption{
     margin-top: 20px;
   }
+  .container-events h3{
+    margin: 0 auto;
+  }
   .container-events .events-posts{
     float: none;
     width: 100%;
   }
   .container-events .events-posts img{
-    width: 200px !important;
+    width: 300px !important;
   }
   .blog .news .news-wrap img{
-    width: 200px !important;
+    width: 300px !important;
   }
   .container > .price{
     flex: 1 1 100%;

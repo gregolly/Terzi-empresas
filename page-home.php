@@ -97,7 +97,7 @@
     <article class="news-flex">
       <a href="<?php the_permalink(); ?>">
           <div class="news-wrap -first-news">
-            <?php the_post_thumbnail('partners-terzi'); ?>
+            <?php the_post_thumbnail(); ?>
             <div class="news-caption">
             <h4><?php the_title(); ?><?php the_excerpt(); ?></h4>
       </a> 
@@ -122,7 +122,7 @@
         ?>
     <a href="<?php the_permalink(); ?>">
       <div class="events-posts"> 
-            <?php the_post_thumbnail('partners-terzi'); ?>
+            <?php the_post_thumbnail(); ?>
             <h4><?php the_title(); ?></h4>
             <div class="date"><?php the_time('d/m/y'); ?></div>
       </div>
