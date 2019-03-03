@@ -21,7 +21,7 @@
             <nav class="navigation animated bounceInLeft">
                 <ul>
                 <li><a href="http://www.terziempresas.com.br" class="action -first">Home</a><li>
-                <li><a href="http://www.terziempresas.com.br" id="noticias" class="action">noticias</a></li>
+                <li><a href="http://www.terziempresas.com.br/#noticias" id="noticias" class="action">noticias</a></li>
                 <li><a href="http://www.terziempresas.com.br/contato" id="contato" class="action">fale conosco</a></li>
                 </ul>
             </nav>

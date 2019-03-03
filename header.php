@@ -32,7 +32,6 @@
           <ul>
             <li class="-modificador"><a href="#empresas" class="action -first">as empresas</a></li>
             <li><a href="/servicos" class="action">serviços</a></li>
-            <li><a href="#convenios" class="action">convênios</a></li>
             <li><a href="#noticias" class="action">noticias</a></li>
             <li><a href="http:\\www.terziempresas.com.br/contato" class="action">fale conosco</a></li>
           </ul>

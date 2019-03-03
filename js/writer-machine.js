@@ -8,3 +8,4 @@ function typeWriter(element) {
 
 const text_logo = document.querySelector('.text-p');
 typeWriter(text_logo);
+

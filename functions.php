@@ -42,7 +42,8 @@ add_action('wp_enqueue_scripts', 'terzitema_add_script_header');
 function terzitema_add_script_header() {
   //Adicionar estilos
   wp_enqueue_style('normalize-terzitema', get_stylesheet_directory_uri() . '/css/normalize.css');
-  wp_enqueue_style('reset-terzitema', get_stylesheet_directory_uri() . '/css/reset.css');
+	wp_enqueue_style('reset-terzitema', get_stylesheet_directory_uri() . '/css/reset.css');
+	wp_enqueue_style('lightbox', get_stylesheet_directory_uri() . '/css/lightbox.css');
   wp_enqueue_style('style-terzitema', get_stylesheet_directory_uri() . '/style.css');
 }
 
@@ -56,7 +57,9 @@ function terzi_add_script_rodape(){
 	wp_enqueue_script('menu-overlay', get_stylesheet_directory_uri() . '/js/menu-responsive.js');
 	wp_enqueue_script('menu-responsivo-interno', get_stylesheet_directory_uri() . '/js/menu-responsivo-interno.js');
 	wp_enqueue_script('contador', get_stylesheet_directory_uri() . '/js/count.js');
-	wp_enqueue_script('writer', get_stylesheet_directory_uri() . 'js/writer-machine.js');
+	wp_enqueue_script('writer', get_stylesheet_directory_uri() . '/js/writer-machine.js');
+	wp_enqueue_script('load-bar', get_stylesheet_directory_uri() . '/js/writer-machine.js');
+	wp_enqueue_script('lightbox', get_stylesheet_directory_uri() . '/js/lightbox.js');
   wp_deregister_script('jquery');
 }
 
@@ -127,13 +130,16 @@ function terzi_empresas_registrar_custom_post_type() {
 		'public' => true,  //Se o Custom Type pode ser adicionado aos menus e exibidos em buscas
 		'hierarchical' => false,  //Se o Custom Post pode ser hierarquico como as páginas
 		'menu_position' => 5,  //Posição do menu que será exibido
-		'supports' => array('title','editor','thumbnail', 'custom-fields', 'revisions') //Quais recursos serão usados (metabox)
+		'supports' => array('title','editor','thumbnail', 'custom-fields', 'revisions'), //Quais recursos serão usados (metabox)
+		'show_in_rest'=> true
     );
 
 	register_post_type( 'Eventos' , $argsEventos );
 
 	flush_rewrite_rules();
 }
+add_action('shortcode', 'terzi_empresas_registrar_custom_post_type');
+
 //customizar paginas de login
 function custom_login_css() {
 	echo '<link rel="stylesheet" type="text/css" href="'.get_stylesheet_directory_uri().'/style.css"/>';

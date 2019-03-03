@@ -85,7 +85,7 @@
 </section>
 
 
-<section class="blog" id="noticias" href="#noticias">
+<section class="blog" id="noticias">
   <div class="news">
     <h3><?php the_field('titulo_news'); ?></h3>
     <?php
@@ -97,7 +97,7 @@
     <article class="news-flex">
       <a href="<?php the_permalink(); ?>">
           <div class="news-wrap -first-news">
-            <?php the_post_thumbnail('news-thumbnail'); ?>
+            <?php the_post_thumbnail('partners-terzi'); ?>
             <div class="news-caption">
             <h4><?php the_title(); ?><?php the_excerpt(); ?></h4>
       </a> 
@@ -118,11 +118,11 @@
             'post_type' => 'eventos',
         ]); 
           
-       if(have_posts()) : while($Eventos->have_posts()) : $Eventos->the_post();
+       if($Eventos->have_posts()) : while($Eventos->have_posts()) : $Eventos->the_post();
         ?>
     <a href="<?php the_permalink(); ?>">
       <div class="events-posts"> 
-            <?php the_post_thumbnail('news-thumbnail'); ?>
+            <?php the_post_thumbnail('partners-terzi'); ?>
             <h4><?php the_title(); ?></h4>
             <div class="date"><?php the_time('d/m/y'); ?></div>
       </div>

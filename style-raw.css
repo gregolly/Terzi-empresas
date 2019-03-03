@@ -928,6 +928,15 @@ a{
   width: 40px;
   font-size: 25px;
 }
+.rodape .rodape-itens .rodape-wrap .get_touch{
+  background-color: #000;
+  margin-top: 20px;
+  display: inline-block;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+}
 .contato-form{
   padding-left: 15px;
   padding-right: 15px;
@@ -1035,6 +1044,86 @@ a{
   width: 100%;
   display: flex;
 }
+.titulo-empresas{
+  text-align: center;
+  background-color: #d92225;
+  width: 230px;
+  color: #fff;
+  margin: 60px auto;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 0;
+  font-weight: bold;
+}
+.galeria-container{
+  margin-top: 40px;
+}
+.galeria-foto{
+  flex: 1 1 360px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.galeria-foto img{
+  width: 360px;
+  height: 200px;
+}
+.nome{
+  width: 50%;
+}
+.container .nome-qualquer{
+  flex: 1 1 300px;
+  margin-right: 40px;
+  margin-bottom: 50px;
+}
+.container .nome-qualquer.-servicos{
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+.container .nome-qualquer img{
+  float: left;
+  margin-right: 20px;
+  width: 300px;
+  height: 200px;
+}
+.container .nome-qualquer h3{
+  font-size: 1em;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+.contact-services{
+  background-color: #4d4d4d;
+  position: relative;
+  padding: 60px 0;
+  bottom: -17px;
+}
+.contact-services .container{
+  justify-content: space-evenly;
+}
+.contact-services .container p{
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1.1;
+  width: 301px;
+}
+.contact-services .container a{
+  width: 200px;
+  color: #fff;
+  background-color: #d92225;
+  text-align: center;
+  line-height: 40px;
+  height: 40px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
 .header.-interno{
   background-color: #07080c;
   width: 100%;
@@ -1058,11 +1147,41 @@ a{
 }
 #empresas-servicos h2{
   text-align: center;
-  margin: 40px 0;
-  font-size: 36px;
-  font-family: 'Roboto', sans-serif;
+  background-color: #d92225;
+  width: 230px;
+  color: #fff;
+  margin: 60px auto;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+  padding: 15px 0;
+  font-weight: bold;
+}
+
+#empresas-servicos .img-empresas{
+  margin: 10px auto !important;
+  padding-bottom: 80px;
+}
+#empresas-servicos .item-wrap{
+  flex: 1 1 570px;
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+#empresas-servicos .item-wrap img{
+  float: left;
+  margin-right: 20px;
+  width: 250px;
+  height: 200px;
+}
+#empresas-servicos .item-wrap h3{
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+#empresas-servicos .item-wrap p{
+  font-size: 1em;
+  font-family: 'Roboto', sans-serif;
 }
 .pesquisa{
   padding: 20px;
@@ -1111,6 +1230,12 @@ a{
   }
   .overlay-menu{
     display: none;
+    background-color: #4d4d4d;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10; 
+    transition: .3s ease;
   }
   .overlay-iterno{
     display: none !important;
@@ -1156,7 +1281,14 @@ a{
   .register-wrap p{
     padding-left: 12px;
   }
-  
+  .nome{
+    width: 100%;
+  }
+  .contact-services .container p{
+    margin-bottom: 20px;
+    font-size: 1em;
+    width: 100%;
+  }
 }
 
 @media (max-width:873px){
@@ -1179,10 +1311,14 @@ a{
   .container-blog{
     float: none !important;
     width: 100% !important;
+    max-width: 300px;
+    margin: 0 auto;
   }
   .aside-container{
     float: none !important;
     width: 100% !important;
+    max-width: 300px;
+    margin: 0 auto;
   }
   .services-container{
     max-width: 300px;
@@ -1253,9 +1389,14 @@ a{
   }
   .blog > .news{
     flex: 1 1 100%;
+    padding: 0px;
   }
   .blog .news .container-events{
     flex: 1 1 100%;
+  }
+  .container-events{
+    padding: 0px;
+    margin-top: 60px;
   }
   .blog .news .news-wrap{
     flex-wrap: wrap;
@@ -1266,6 +1407,12 @@ a{
   .container-events .events-posts{
     float: none;
     width: 100%;
+  }
+  .container-events .events-posts img{
+    width: 200px !important;
+  }
+  .blog .news .news-wrap img{
+    width: 200px !important;
   }
   .container > .price{
     flex: 1 1 100%;
@@ -1510,21 +1657,29 @@ html{
   padding-right: 15px;
   margin-top: 80px;
 }
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
 .container-direction-blog{
-  margin: 40px auto;
+  margin-right: 40px;
+  flex: 1 1 260px;
 }
-.container-blog article{
-  border-bottom: 1px solid #000;
-}
-.container-blog h4{
+.container-blog h2{
   font-weight: 400;
   font-style: normal;
   font-family: 'Roboto', sans-serif;
-  color: #2a2a2a;
+  color: #fff;
+  background-color: #d92225;
+  width: 220px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto;
   font-size: 42px;
   line-height: 1.2;
   letter-spacing: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 .container-blog h4:hover{
   color: #b9de3e;
@@ -1543,11 +1698,12 @@ html{
   font-style: normal;
   font-family: 'Roboto', sans-serif;
   color: #2a2a2a;
-  font-size: 42px;
+  font-size: 1em;
   line-height: 1.2;
   letter-spacing: 0px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  margin-top: 5px;
 }
 .news-wrap-interno{
   margin-bottom: 40px;
@@ -1569,7 +1725,7 @@ html{
 }
 .news-wrap-interno .news-caption-interno .cat-blog{
   display: inline-block;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   margin-top: 20px;
 }
 .post-nav{
@@ -1596,7 +1752,7 @@ html{
 .mina{
   padding: 50px 0;
 }
-.mina img{
+.mina .logo-empresas{
   margin: 40px auto;
 }
 .mina p{
@@ -1773,4 +1929,24 @@ body.login{
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+.pace-inactive {
+  display: none;
+}
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
 }

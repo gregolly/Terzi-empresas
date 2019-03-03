@@ -33,7 +33,8 @@
         </div>
 
           <div class="rodape-wrap">
-              <img src="<?php the_field('rodape-logo', 31); ?>" alt="<?php the_field('rodape-logo-alt', 31); ?>">   
+              <img src="<?php the_field('rodape-logo', 31); ?>" alt="<?php the_field('rodape-logo-alt', 31); ?>">
+              <a class="get_touch" href="http:\\www.terziempresas.com.br/contato">entrar em contato</a>   
           </div>
       </div>
 
