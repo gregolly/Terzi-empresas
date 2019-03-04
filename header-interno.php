@@ -20,9 +20,12 @@
     <div class="container header-interno">
             <nav class="navigation animated bounceInLeft">
                 <ul>
-                <li><a href="http://www.terziempresas.com.br" class="action -first">Home</a><li>
-                <li><a href="http://www.terziempresas.com.br/#noticias" id="noticias" class="action">noticias</a></li>
-                <li><a href="http://www.terziempresas.com.br/contato" id="contato" class="action">fale conosco</a></li>
+                  <li><a href="http://www.terziempresas.com.br" class="action -first">Home</a><li>
+                  <li class="-modificador"><a href="http://www.terziempresas.com.br/#empresas"
+                   class="action -first">as empresas</a></li>
+                  <li><a href="/servicos" class="action">serviços</a></li>
+                  <li><a href="http://www.terziempresas.com.br/#noticias" id="noticias" class="action">noticias</a></li>
+                  <li><a href="http://www.terziempresas.com.br/contato" id="contato" class="action">fale conosco</a></li>
                 </ul>
             </nav>
 

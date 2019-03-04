@@ -4,7 +4,7 @@
 
 ?>
 <div class="container-blog">
-    <h2>noticias</h2>
+    <h2>notícias</h2>
     <div class="row">
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?> 
       <div class="container-direction-blog">

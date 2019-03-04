@@ -1,4 +1,9 @@
 ﻿<?php
+session_start();
+$nome = $_POST["nome"];
+$email = $_POST["email"];
+$telefone = $_POST["telefone"];
+$mensagem = $_POST["mensagem"];
 // Import PHPMailer classes into the global namespace
 // These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -14,13 +19,13 @@ try {
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp1.example.com;smtp2.example.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'user@example.com';                 // SMTP username
+    $mail->Username = 'clauido@terziempresas.com.br';                 // SMTP username
     $mail->Password = 'secret';                           // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 465;                                    // TCP port to connect to
+    $mail->Port = 587;                                    // TCP port to connect to
 
     //Recipients
-    $mail->setFrom('clauido@terziempresas.com.br', 'Mailer');
+    $mail->setFrom('joe@example.net', 'Mailer');
     $mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
 
     //Content

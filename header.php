@@ -47,8 +47,10 @@
     </div> 
       <div class="logo">
         
-            <div class="logo-text">
+        <div class="logo-text">
             <h1><img src="<?php the_field('logo-terzi', 31); ?>" alt="<?php the_field('logo-terzi-alt', 31); ?>" class="logo-slide animated bounceInLeft">
+              </h1>
+              <h1><img src="<?php the_field('logo-terzi-responsivo', 31); ?>" alt="<?php the_field('logo-terzi-alt', 31); ?>" class="logo-slide logo-responsivo animated bounceInLeft">
               </h1>
             </div>
             <p class="animated bounceInRight text-p"><?php the_field('texto-logo-slide'); ?></p>

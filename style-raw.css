@@ -183,9 +183,9 @@ a{
   20%{
     background-image: url('img/slide3.jpg');
   }
-  40%{
+  /*40%{
     background-image: url('img/slide4.jpg');
-  }
+  }*/
 }
 .slide .medias.-icons{
   width: 100px;
@@ -222,18 +222,24 @@ a{
   text-transform: uppercase;
   color: #ffffff;
   padding-right: 32px;
+  width: 144px;
+  height: 37px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  padding-top: 11px;
+}
+.slide .nav-widgets .navigation .action:hover{
+  background-color: #d92225;
 }
 .slide .nav-widgets .navigation .action.-first{
   width: 144px;
   height: 37px;
-  background-color: #d92225;
   padding-left: 25px;
   padding-bottom: 10px;
   padding-top: 11px;
 }
 .slide .nav-widgets .navigation .action.-first:hover{
-  background-color:#fff;
-  color: #000;
+  background-color: #d92225;
 }
 .social-media .-icons{
   object-fit: contain;
@@ -253,6 +259,9 @@ a{
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
+}
+.logo-slide.logo-responsivo{
+  display: none;
 }
 .logo-text{
   max-width: 500px;
@@ -562,10 +571,10 @@ a{
   margin-left: 20px;
 }
 .blog .news .news-wrap img{
-  border-bottom-left-radius: 50px;
-  border-top-right-radius: 50px;
+  border-radius: 5px;
   max-width: none;
-  width: 156px;
+  width: 156px !important;
+  height: 120px !important;
 }
 .blog .news .news-wrap h4{
   font-family: 'Roboto', sans-serif;
@@ -661,9 +670,9 @@ a{
   margin-top: 20px;
 }
 .container-events .events-posts img{
-  border-bottom-left-radius: 50px;
-  border-top-right-radius: 50px;
-  width: 156px;
+  border-radius: 5px;
+  width: 156px !important;
+  height: 120px;
 }
 .container-events .events-posts .date{
   font-family: 'Roboto', sans-serif;
@@ -1128,12 +1137,17 @@ a{
 
 .header.-interno{
   background-color: #07080c;
+  background-image: url('img/slide1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 120px;
   width: 100%;
 }
 .header-interno{
   justify-content: space-around;
   align-items: center;
-  padding: 10px 0px;
+  padding: 25px 0px;
   font-family: 'Roboto', sans-serif;
 }
 .header-interno .navigation ul li{
@@ -1316,6 +1330,12 @@ a{
     max-width: 300px;
     margin: 0 auto;
   }
+  .logo-slide{
+    display: none;
+  }
+  .logo-slide.logo-responsivo{
+    display: block;
+  }
   .aside-container{
     float: none !important;
     width: 100% !important;
@@ -1418,9 +1438,11 @@ a{
   }
   .container-events .events-posts img{
     width: 300px !important;
+    height: 150px !important;
   }
   .blog .news .news-wrap img{
     width: 300px !important;
+    height: 150px !important;
   }
   .container > .price{
     flex: 1 1 100%;
