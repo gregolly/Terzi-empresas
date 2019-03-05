@@ -10,14 +10,17 @@
     </div>
   </section>
   <div class="contato-form">
-  <h2 class="titulo-contato">Entre em contato conosco</h2> 
-    <form action="<?= get_template_directory_uri(); ?>/enviar-email.php" id="form1" method="post">
+  <h2 class="titulo-contato">Entre em contato conosco</h2>
+ 
+    <!--form action="<?= get_template_directory_uri(); ?>/enviar-email.php" id="form1" method="post">
           <input type="text" name="name" id="name" placeholder="Nome">
         <input type="text" name="email" id="email" placeholder="seu e-mail" required>
         <input type="text" name="telefone" id="telefone" placeholder="(65) 99999-9999" required>
         <textarea type="text" name="mensagem" rows="10" id="mensagem" placeholder="Mensagem"></textarea>
-        <button type="submit" form="form1" value="Enviar"><?php the_field('button-form', 31); ?></button>
-    </form>
+        <input class="button-form-send" type="submit" form="form1" value="Enviar"><?php the_field('button-form', 31); ?>
+    </form-->
+  <?php the_content(); ?>
+ 
   </div>
 </section>
 

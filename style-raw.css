@@ -155,7 +155,7 @@ a{
 .slide{
   width: 100%;
   height: 634px;
-  /*background-image: url('img/slide1.jpg');*/
+  background-image: url('img/slide1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -180,7 +180,7 @@ a{
   0%{
     background-image: url('img/slide2.jpg');
   }
-  20%{
+  100%{
     background-image: url('img/slide3.jpg');
   }
   /*40%{
@@ -260,7 +260,7 @@ a{
   display: flex;
   flex-wrap: wrap;
 }
-.logo-slide.logo-responsivo{
+.logo-main-responsive{
   display: none;
 }
 .logo-text{
@@ -978,11 +978,13 @@ a{
   font-weight: bold;
   color: #4b4b4b;
 }
-.contato-form button{
-  width: 140px;
-  border-radius: 5px;
+.contato-form .wpcf7-submit{
+  width:  100%;
+  border-radius: 5px !important;
   cursor: pointer;
   height: 52px;
+  line-height: 1px;
+  letter-spacing: 2px;
   background-color: #000000;
   border: none;
   color: #fff;
@@ -990,7 +992,7 @@ a{
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
 }
-.contato-form button:hover{
+.contato-form input:hover{
   background-color: #fff;;
   color: #000;
   border: 1px solid #000;
@@ -1004,8 +1006,8 @@ a{
   width: 50px;
   height: 50px;
   background-color: #00A859;
-  bottom: 40px;
-  right: 50px;
+  bottom: 80px;
+  right: 20px;
   text-decoration: none;
   text-align: center;
   line-height: 50px;
@@ -1244,6 +1246,10 @@ a{
   .slide .logo{
     padding-top: 50px;
   }
+  
+  .header.-interno{
+    height: 350px;
+  }
   .overlay-menu{
     display: none;
     background-color: #4d4d4d;
@@ -1330,10 +1336,10 @@ a{
     max-width: 300px;
     margin: 0 auto;
   }
-  .logo-slide{
+  .logo-main{
     display: none;
   }
-  .logo-slide.logo-responsivo{
+  .logo-main-responsive{
     display: block;
   }
   .aside-container{
@@ -1759,24 +1765,25 @@ html{
   margin-top: 20px;
 }
 .post-nav{
-  display: flex;
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
+  display: inline-block;
 }
 
 .post-nav .pager{
-  display: flex;
+  display: inline-block;
 }
 .post-nav .pager li{
   margin-right: 10px;
   background-color: #b9de3e;
-  color: #fff !important;
-  padding: 5px;
-  font-family: 'Roboto', sans-serif;
+  color: #fff!important;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  font-family: Roboto,sans-serif;
   border-radius: 5px;
-  text-decoration: none;
+  display: inline-block;
+}
+.post-nav li a{
+  color: #fff;
 }
 
 .mina{

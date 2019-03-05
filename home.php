@@ -28,18 +28,20 @@
     <?php endwhile; else: ?>
     <?php endif; ?>
     
-    </div>  
+    </div>
+    <?php 
+if (function_exists('wp_bootstrap_pagination') ) wp_bootstrap_pagination();
+?> 
+
+     
 </div>
+
 <?php get_sidebar(); ?>
 
 
+<?php get_footer() ?> 
 
   
 
 
 
-<?php 
-if (function_exists('wp_bootstrap_pagination') ) wp_bootstrap_pagination();
-?> 
-
-<?php get_footer() ?>
