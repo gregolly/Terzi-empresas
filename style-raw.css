@@ -155,7 +155,7 @@ a{
 .slide{
   width: 100%;
   height: 634px;
-  background-image: url('img/slide1.jpg');
+  background-image: url('img/slide2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -174,18 +174,25 @@ a{
 
 }
 @keyframes slideBg {
-  /*0%{
-    background-image: url('img/slide1.jpg');
-  }*/
   0%{
+    background-image: url('img/slide2.jpg');
+  }
+  20%{
+    background-image: url('img/slide3.jpg');
+  }
+  40%{
+    background-image: url('img/slide2.jpg');
+  }
+  60%{
+    background-image: url('img/slide3.jpg');
+  }
+  80%{
     background-image: url('img/slide2.jpg');
   }
   100%{
     background-image: url('img/slide3.jpg');
   }
-  /*40%{
-    background-image: url('img/slide4.jpg');
-  }*/
+  
 }
 .slide .medias.-icons{
   width: 100px;
@@ -333,7 +340,7 @@ a{
   letter-spacing: normal;
   text-align: left;
   color: #080809;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .summary-services .list-summary-services{
@@ -1501,14 +1508,14 @@ a{
     flex: 1 1 100%;
   }
   .gotopbtn{
-    width: 35px;
-    height: 35px;
-    line-height: 35px;
-    bottom: 15px;
-    right: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    bottom: 80px;
+    right: 16px
   }
   .article-geral{
-    max-width: 100% !important;
+    width: 100% !important;
     float: none !important;
   }
   .introducao-geral {
