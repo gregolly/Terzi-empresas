@@ -3,7 +3,11 @@
 //Template name: Notícias
 
 ?>
+<?php if (is_active_sidebar('terzi-empresas-sidebar')) : ?>
 <div class="container-blog">
+<?php else : ?>
+<div class="container-blog-full">
+<?php endif;?>
     <h2>notícias</h2>
     <div class="row">
     <?php if(have_posts()) : while(have_posts()) : the_post(); ?> 

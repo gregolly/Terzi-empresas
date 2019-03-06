@@ -68,7 +68,8 @@ function terzi_add_script_rodape(){
 
 //function terzi_tema_action_init()
 //{
-	//register_nav_menu('terzi-menu-principal', 'Menu principal (cabeçalho)');
+	//register_nav_menu('twmenu-terzi-interno', 'Menu Interno');
+	//register_nav_menu('twmenu-terzi', 'Menu principal');
 //}
 
 add_theme_support( 'post-formats', [ 'aside', 'gallery', 'link', 'image', 'quote', 'status', 'video', 'audio', 'chat'] );

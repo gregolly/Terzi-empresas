@@ -27,8 +27,7 @@
                   <li><a href="http://www.terziempresas.com.br/#noticias" id="noticias" class="action">noticias</a></li>
                   <li><a href="http://www.terziempresas.com.br/contato" id="contato" class="action">fale conosco</a></li>
                 </ul>
-            </nav>
-
+            </nav>  
             <ul class="social-media animated bounceInRight">
                 <a href="<?php the_field('youtube', 31);?>" class="-icons"><i class="fab fa-youtube"></i></a>
                 <a href="<?php the_field('linkedin', 31);?>" class="-icons"><i class="fab fa-linkedin"></i></a>
