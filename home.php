@@ -15,7 +15,7 @@
         <article class="news-flex-interno">
               <a href="<?php the_permalink(); ?>">
                   <div class="news-wrap-interno -first-news">
-                    <?php the_post_thumbnail('thumbnail'); ?>
+                    <?php the_post_thumbnail('medium'); ?>
                     <div class="news-caption-interno">
                     <h4><?php the_title(); ?></h4>
                     <div class="date"><?php the_time('d/m/y'); ?></div>
