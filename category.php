@@ -4,9 +4,12 @@
   
 
 
-
+<?php if (is_active_sidebar('terzi-empresas-sidebar')) : ?>
 <div class="container-blog">
-
+<?php else : ?>
+<div class="container-blog-full">
+<?php endif;?>
+<h2>Categoria</h2>
   <div class="row">
   <?php if(have_posts()) : while(have_posts()) : the_post(); ?> 
     <div class="container-direction-blog">
@@ -15,7 +18,7 @@
            
               <h4><?php the_title(); ?></h4>
                 <div class="news-wrap-interno -first-news">
-                  <?php the_post_thumbnail('blog-images'); ?>
+                  <?php the_post_thumbnail('medium'); ?>
                   <div class="news-caption-interno">
                   <?php echo the_excerpt(); ?>
                     <div class="date"><?php the_time('d/m/y'); ?></div>
