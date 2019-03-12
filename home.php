@@ -1,4 +1,4 @@
-<?php get_header('interno'); 
+﻿<?php get_header('interno'); 
 
 //Template name: Notícias
 
@@ -20,7 +20,6 @@
                     <h4><?php the_title(); ?></h4>
                     <div class="date"><?php the_time('d/m/y'); ?></div>
                     <?php echo the_excerpt(); ?>
-                      <span class="cat-blog"><?php the_category(', '); ?><span>
                     </div>
                   </div>
                   

@@ -99,10 +99,10 @@
           <div class="news-wrap -first-news">
             <?php the_post_thumbnail(); ?>
             <div class="news-caption">
-            <h4><?php the_title(); ?><?php the_excerpt(); ?></h4>
+            <h4><?php the_title(); ?></h4>
+            <?php the_excerpt(); ?>
       </a> 
               <div class="date"><?php the_time('d/m/y'); ?></div>
-              <span class="category"><?php the_category(', '); ?></span>
             </div>
           </div>
 </article>
