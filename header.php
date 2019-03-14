@@ -44,6 +44,45 @@
         </ul>
         <?php get_search_form(); ?>
       </div>
+<style>
+      
+      .slide{
+  width: 100%;
+  height: 634px;
+  background-image: url("<?php get_field('bg-slide1'); ?>");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  backface-visibility: hidden;
+  position: relative;
+  animation: slideBg 15s linear infinite 0s;
+  -moz-animation: slideBg 15s linear infinite 0s;
+  -ms-animation: slideBg 15s linear infinite 0s;
+  -webkit-animation: slideBg 15s linear infinite 0s;
+  -o-animation: slideBg 15s linear infinite 0s;
+  animation-timing-function: step-end;
+  -moz-animation-timing-function: step-end;
+  -ms-animation-timing-function: step-end;
+  -webkit-animation-timing-function: step-end;
+  -o-animation-timing-function: step-end;
+
+}
+@keyframes slideBg {
+  0%{
+    background-image: url("<?php the_field('bg-slide1'); ?>");
+  }
+  20%{
+    background-image: url("<?php the_field('bg-slide2'); ?>");
+  }
+  40%{
+    background-image: url("<?php the_field('bg-slide3'); ?>");
+  }
+  60%{
+    background-image: url("<?php the_field('bg-slide4'); ?>");
+  }
+}
+      
+</style>
     </div> 
       <div class="logo">
         

@@ -1,4 +1,4 @@
-$('#count').each(function () {
+jQuery('#count').each(function () {
   $(this).prop('Counter',0).animate({
       Counter: $(this).text()
   }, {

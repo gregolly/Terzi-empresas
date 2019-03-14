@@ -82,6 +82,7 @@ add_theme_support('post-thumbnails');
 add_image_size('news-thumbnail', 156, 125, true);
 add_image_size('img-aleatory', 450, 300, true);
 add_image_size('partners-terzi',200, 120, true);
+add_image_size('blog', 300, 200, true);
 
 
 //adicionar titulo dinamico
