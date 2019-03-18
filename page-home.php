@@ -113,6 +113,7 @@
 
 <div class="container-events">
   <h3><?php the_field('titulo_eventos'); ?></h3>
+  <div class="row-events">
   <?php $Eventos = new WP_Query([
             'posts_per_page' => 6,
             'post_type' => 'eventos',
@@ -120,15 +121,19 @@
           
        if($Eventos->have_posts()) : while($Eventos->have_posts()) : $Eventos->the_post();
         ?>
-    <a href="<?php the_permalink(); ?>">
-      <div class="events-posts"> 
+  
+    
+      <div class="events-posts">
+      <a href="<?php the_permalink(); ?>"> 
             <?php the_post_thumbnail(); ?>
+            </a> 
             <h4><?php the_title(); ?></h4>
             <div class="date"><?php the_time('d/m/y'); ?></div>
       </div>
-    </a> 
-  <?php endwhile; else: endif; ?>
+    
   
+  <?php endwhile; else: endif; ?>
+  </div>
 </div><!-- fim do container -->    
 <?php wp_reset_query(); ?>
 </section>

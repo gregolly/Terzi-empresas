@@ -620,12 +620,15 @@ a{
   background-color: #d92225;
   padding: 0 15px;
 }
-.container-events .events-posts{
-  float: left;
+.row-events{
+  display: flex;
+  flex-wrap: wrap;
+}
+.container-events .row-events .events-posts{
   width: 50%;
   margin-top: 30px;
 }
-.container-events .events-posts h4{
+.container-events .row-events .events-posts  h4{
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
   font-weight: bold;
@@ -634,12 +637,12 @@ a{
   color: #000;
   margin-top: 20px;
 }
-.container-events .events-posts img{
+.container-events .row-events .events-posts img{
   border-radius: 5px;
   width: 156px !important;
   height: 120px;
 }
-.container-events .events-posts .date{
+.container-events .row-events .events-posts .date{
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   font-weight: bold;
@@ -1404,11 +1407,10 @@ a{
   .container-events h3{
     margin: 0 auto;
   }
-  .container-events .events-posts{
-    float: none;
+  .container-events .row-events .events-posts{
     width: 100%;
   }
-  .container-events .events-posts img{
+  .container-events .row-events .events-posts img{
     width: 300px !important;
     height: 150px !important;
   }
