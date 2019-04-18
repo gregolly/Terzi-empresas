@@ -158,7 +158,12 @@
           <h5><?php the_field('titulo_recursos'); ?></h5>
     <?php if(have_rows('recursos-img-item')) : while(have_rows('recursos-img-item')) :  the_row(); ?>
       <img class="img-recursos" src="<?php the_sub_field('recursos-img'); ?>" alt="<?php the_sub_field('alt-recursos'); ?>">
-      <?php endwhile; else: endif; ?>     
+      <?php endwhile; else: endif; ?>
+      <ul>
+        <li>LCA</li>
+        <li>MCR </li>
+        <li>POUPANÇA</li>
+      </ul>     
   </div>
 </section>
 <section class="banner">
