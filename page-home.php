@@ -142,10 +142,10 @@
   <div class="price">
     <h5><?php the_field('titulo-cotacao'); ?></h5>
         <div class="cambio" width="200px">
-          <iframe src="https://www.precododolar.com/widgets/cotacao.php" width="100%;" height="300px;" scrolling="no" frameborder="0"></iframe>
+          <iframe src="https://www.agron.com.br/widgets/dollar.php" width="290px;" height="220px;" scrolling="no" frameborder="0"></iframe>
         </div>
         <div class="prices" width="200px">
-            <iframe src="https://www.agron.com.br/widgets/cotacao_interna.php" width="100%;" height="320px;" scrolling="no" frameborder="0"  align="middle"></iframe>
+          <iframe src="https://www.agron.com.br/widgets/cotacao_interna.php" width="100%;" height="320px;" scrolling="no" frameborder="0"  align="middle"></iframe>
         </div>
   </div>
   <div class="links">
